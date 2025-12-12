@@ -12,7 +12,9 @@ import {
   X,
   Settings,
   BarChart,
-  FileText
+  FileText,
+  CheckSquare,
+  ClipboardList
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -28,11 +30,12 @@ function AdminSidebar({ isOpen, setIsOpen }: SidebarProps) {
 
   const navItems = [
     { href: "/admin/dashboard", icon: LayoutDashboard, label: "Visão Geral" },
-    { href: "/admin/users", icon: Users, label: "Usuários" },
-    { href: "/admin/modules", icon: BookOpen, label: "Módulos" },
+    { href: "/admin/users", icon: Users, label: "Usuários / Alunos" },
+    { href: "/admin/assessments", icon: CheckSquare, label: "Avaliações / Testes" },
+    { href: "/admin/modules", icon: BookOpen, label: "Módulos / Aulas" },
     { href: "/admin/materials", icon: Library, label: "Materiais" },
-    { href: "/admin/lives", icon: Calendar, label: "Encontros ao Vivo" },
-    { href: "/admin/support", icon: MessageSquare, label: "Atendimentos" },
+    { href: "/admin/lives", icon: Calendar, label: "Transmissões" },
+    { href: "/admin/appointments", icon: ClipboardList, label: "Atendimentos Individuais" },
     { href: "/admin/reports", icon: BarChart, label: "Relatórios" },
     { href: "/admin/settings", icon: Settings, label: "Configurações" },
   ];

@@ -27,6 +27,8 @@ import LivesListAdmin from "@/pages/admin/lives-list";
 import SupportListAdmin from "@/pages/admin/support-list";
 import ReportsAdmin from "@/pages/admin/reports";
 import SettingsAdmin from "@/pages/admin/settings";
+import AssessmentsListAdmin from "@/pages/admin/assessments-list";
+import AppointmentsAdmin from "@/pages/admin/appointments.tsx";
 
 const Landing = () => (
   <div className="min-h-screen flex flex-col font-sans">
@@ -244,9 +246,11 @@ function Router() {
       <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route path="/admin/users" component={UsersList} />
       <Route path="/admin/modules" component={ModulesListAdmin} />
+      <Route path="/admin/assessments" component={AssessmentsListAdmin} />
       <Route path="/admin/materials" component={MaterialsListAdmin} />
       <Route path="/admin/lives" component={LivesListAdmin} />
       <Route path="/admin/support" component={SupportListAdmin} />
+      <Route path="/admin/appointments" component={AppointmentsAdmin} />
       <Route path="/admin/reports" component={ReportsAdmin} />
       <Route path="/admin/settings" component={SettingsAdmin} />
       
