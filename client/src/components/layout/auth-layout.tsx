@@ -1,10 +1,11 @@
 import { Link } from "wouter";
-import { Heart } from "lucide-react";
+import { Heart, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
-      {/* Left: Branding */}
+      {/* Left: Branding (Desktop) */}
       <div className="relative hidden lg:flex flex-col bg-sidebar text-sidebar-foreground p-10 justify-between overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-10" 
@@ -41,8 +42,28 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       </div>
 
       {/* Right: Form */}
-      <div className="flex flex-col items-center justify-center p-6 sm:p-10 bg-background">
-        <div className="w-full max-w-sm space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+      <div className="flex flex-col items-center justify-center p-6 sm:p-10 bg-background relative">
+        {/* Mobile Branding & Home Button */}
+        <div className="absolute top-6 left-6 right-6 flex justify-between items-center">
+          <Link href="/">
+            <Button variant="ghost" size="sm" className="gap-2 pl-0 hover:bg-transparent hover:text-primary">
+              <ArrowLeft size={16} /> Voltar para Home
+            </Button>
+          </Link>
+          
+          {/* Mobile Logo Only */}
+          <div className="lg:hidden w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+            <Heart size={20} className="fill-primary" />
+          </div>
+        </div>
+
+        <div className="w-full max-w-sm space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 mt-12 lg:mt-0">
+          {/* Mobile Heading */}
+          <div className="lg:hidden text-center mb-8">
+            <h2 className="font-heading font-bold text-xl text-primary mb-2">Saúde Mental é o que Conta</h2>
+            <p className="text-sm text-muted-foreground">Programa Institucional TCDF</p>
+          </div>
+
           {children}
         </div>
       </div>
