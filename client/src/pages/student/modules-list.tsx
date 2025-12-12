@@ -10,8 +10,8 @@ export default function ModulesList() {
     <StudentLayout>
       <div className="space-y-8">
         <div>
-          <h1 className="text-3xl font-heading font-bold text-foreground">Meus Módulos e Trilhas</h1>
-          <p className="text-muted-foreground mt-2">Acesse seus cursos e continue seu desenvolvimento.</p>
+          <h1 className="text-3xl font-heading font-bold text-foreground">Módulos do Programa</h1>
+          <p className="text-muted-foreground mt-2">Trilha completa de 24h para sua certificação em saúde mental.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -34,10 +34,10 @@ export default function ModulesList() {
                   </div>
                   
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-heading font-bold text-xl mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-heading font-bold text-xl mb-2 group-hover:text-primary transition-colors leading-tight">
                       {module.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2 flex-1">
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-1">
                       {module.description}
                     </p>
                     
@@ -45,7 +45,7 @@ export default function ModulesList() {
                       <div className="flex items-center justify-between text-xs text-muted-foreground font-medium">
                         <div className="flex items-center gap-1.5">
                           <BookOpen size={14} />
-                          <span>{module.lessonsCount} aulas</span>
+                          <span>{module.lessonsCount} partes</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                           <Clock size={14} />

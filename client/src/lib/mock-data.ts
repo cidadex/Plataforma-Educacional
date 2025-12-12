@@ -1,4 +1,3 @@
-import { LucideIcon } from "lucide-react";
 import { 
   BookOpen, 
   Video, 
@@ -21,7 +20,10 @@ import {
   X,
   ChevronRight,
   Star,
-  Award
+  Award,
+  Heart,
+  Brain,
+  Smile
 } from "lucide-react";
 
 // Types
@@ -33,7 +35,7 @@ export interface Module {
   progress: number;
   lessonsCount: number;
   duration: string;
-  category: "Trilha" | "Curso" | "NR-1";
+  category: "Módulo" | "Workshop";
 }
 
 export interface Lesson {
@@ -50,7 +52,7 @@ export interface Lesson {
 export interface Material {
   id: string;
   title: string;
-  type: "PDF" | "E-Book" | "Cartilha";
+  type: "PDF" | "Guia" | "Cartilha";
   url: string;
   size: string;
 }
@@ -75,97 +77,132 @@ export interface UserProfile {
   progress: number;
   completedModules: number;
   certificates: number;
+  department: string;
 }
 
-// Mock Data
+// Mock Data - Based on "Saúde Mental é o que Conta" Proposal
 export const currentUser: UserProfile = {
   id: "u1",
-  name: "Ana Silva",
-  email: "ana.silva@exemplo.com",
+  name: "Mariana Souza",
+  email: "mariana.souza@tcdf.df.gov.br",
   role: "student",
-  avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
-  progress: 65,
-  completedModules: 3,
-  certificates: 2
+  avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80",
+  progress: 15,
+  completedModules: 0,
+  certificates: 0,
+  department: "Auditoria Interna"
 };
 
 export const modules: Module[] = [
   {
     id: "m1",
-    title: "Onboarding Institucional",
-    description: "Conheça nossa cultura, valores e estrutura organizacional.",
-    thumbnail: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80",
-    progress: 100,
-    lessonsCount: 5,
-    duration: "2h",
-    category: "Trilha"
+    title: "Módulo 1: Fundamentos da Saúde Mental",
+    description: "Conceitos gerais, determinantes da saúde mental e combate ao estigma no serviço público.",
+    thumbnail: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80",
+    progress: 80,
+    lessonsCount: 3,
+    duration: "4h",
+    category: "Módulo"
   },
   {
     id: "m2",
-    title: "NR-1: Disposições Gerais",
-    description: "Curso obrigatório sobre normas regulamentadoras de segurança.",
-    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
-    progress: 45,
-    lessonsCount: 8,
+    title: "Módulo 2: Identificação de Sinais de Sofrimento",
+    description: "Reconhecimento de sinais precoces, postura ética e fatores de risco e proteção.",
+    thumbnail: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&q=80",
+    progress: 10,
+    lessonsCount: 3,
     duration: "4h",
-    category: "NR-1"
+    category: "Módulo"
   },
   {
     id: "m3",
-    title: "Liderança e Gestão",
-    description: "Desenvolvimento de competências para líderes e gestores.",
-    thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
-    progress: 10,
-    lessonsCount: 12,
-    duration: "8h",
-    category: "Curso"
+    title: "Módulo 3: Estratégias de Autocuidado e Gestão do Estresse",
+    description: "Sono, alimentação, mindfulness e organização emocional para pausas produtivas.",
+    thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+    progress: 0,
+    lessonsCount: 4,
+    duration: "6h",
+    category: "Módulo"
   },
   {
     id: "m4",
-    title: "Comunicação Eficaz",
-    description: "Técnicas para melhorar a comunicação no ambiente de trabalho.",
-    thumbnail: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80",
+    title: "Módulo 4: Resiliência e Habilidades de Enfrentamento",
+    description: "Desenvolvimento de resiliência, manejo de conflitos e postura frente a adversidades.",
+    thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     progress: 0,
-    lessonsCount: 6,
-    duration: "3h",
-    category: "Curso"
+    lessonsCount: 3,
+    duration: "4h",
+    category: "Módulo"
+  },
+  {
+    id: "m5",
+    title: "Módulo 5: Comunicação Acolhedora",
+    description: "Comunicação Não Violenta (CNV), escuta ativa e promoção de vínculos saudáveis.",
+    thumbnail: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+    progress: 0,
+    lessonsCount: 3,
+    duration: "4h",
+    category: "Módulo"
+  },
+  {
+    id: "m6",
+    title: "Módulo 6: Protocolos e Encaminhamentos",
+    description: "Fluxos de apoio psicológico e articulação com a rede de saúde.",
+    thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    progress: 0,
+    lessonsCount: 2,
+    duration: "2h",
+    category: "Módulo"
   }
 ];
 
 export const lessons: Lesson[] = [
+  // Módulo 1 Lessons
   {
     id: "l1",
     moduleId: "m1",
-    title: "Bem-vindo à Instituição",
-    description: "Uma visão geral sobre nossa história e missão.",
+    title: "Conceitos Gerais e Determinantes",
+    description: "O que é saúde mental além da ausência de doença.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder
-    duration: "15 min",
+    duration: "1h 20min",
     completed: true,
     attachments: [
-      { id: "mat1", title: "Manual do Colaborador", type: "PDF", url: "#", size: "2.5 MB" }
+      { id: "mat1", title: "Política Nacional de Atenção à Saúde do Servidor (PNASS)", type: "PDF", url: "#", size: "1.5 MB" }
     ]
   },
   {
     id: "l2",
     moduleId: "m1",
-    title: "Nossos Valores",
-    description: "Entenda os princípios que guiam nossas decisões.",
+    title: "Combate ao Estigma",
+    description: "Desmistificando preconceitos sobre saúde mental no ambiente de trabalho.",
     videoUrl: "",
-    duration: "20 min",
+    duration: "1h 20min",
     completed: true,
     attachments: []
   },
   {
     id: "l3",
-    moduleId: "m2",
-    title: "Introdução à NR-1",
-    description: "Conceitos básicos e aplicabilidade.",
+    moduleId: "m1",
+    title: "Relevância no Serviço Público",
+    description: "Impactos da saúde mental na produtividade e clima organizacional.",
     videoUrl: "",
-    duration: "30 min",
+    duration: "1h 20min",
     completed: false,
     attachments: [
-      { id: "mat2", title: "Norma Regulamentadora 1", type: "PDF", url: "#", size: "1.2 MB" },
-      { id: "mat3", title: "Guia de Bolso", type: "E-Book", url: "#", size: "5.0 MB" }
+      { id: "mat2", title: "Lei nº 8.112/1990 - Trechos Relevantes", type: "PDF", url: "#", size: "500 KB" }
+    ]
+  },
+  // Módulo 2 Sample
+  {
+    id: "l4",
+    moduleId: "m2",
+    title: "Sinais Precoces de Sofrimento",
+    description: "Como identificar mudanças de comportamento em si e nos colegas.",
+    videoUrl: "",
+    duration: "1h 20min",
+    completed: false,
+    attachments: [
+      { id: "mat3", title: "Checklist de Auto-observação", type: "Guia", url: "#", size: "300 KB" }
     ]
   }
 ];
@@ -173,28 +210,29 @@ export const lessons: Lesson[] = [
 export const lives: LiveEvent[] = [
   {
     id: "ev1",
-    title: "Mentoria de Carreira",
+    title: "Aula Magna: Saúde Mental é o que Conta",
     date: "2025-12-15",
     time: "14:00",
-    instructor: "Carlos Mendes",
-    description: "Sessão de tira-dúvidas sobre plano de carreira.",
+    instructor: "Kaká Ribeiro",
+    description: "Abertura oficial do programa com a Diretora Geral da consultoria.",
     status: "upcoming",
     joinUrl: "#"
   },
   {
     id: "ev2",
-    title: "Workshop de Inovação",
-    date: "2025-12-10",
+    title: "Workshop: Práticas de Mindfulness",
+    date: "2025-12-20",
     time: "10:00",
-    instructor: "Julia Roberts",
-    description: "Workshop prático sobre metodologias ágeis.",
-    status: "past",
+    instructor: "Especialista Convidado",
+    description: "Técnicas práticas de respiração e atenção plena para o dia a dia.",
+    status: "upcoming",
     joinUrl: "#"
   }
 ];
 
 export const recentMaterials: Material[] = [
-  { id: "mat1", title: "Manual do Colaborador", type: "PDF", url: "#", size: "2.5 MB" },
-  { id: "mat2", title: "Código de Ética", type: "PDF", url: "#", size: "1.8 MB" },
-  { id: "mat3", title: "Guia de Benefícios", type: "Cartilha", url: "#", size: "3.2 MB" },
+  { id: "mat1", title: "Guia de Autocuidado", type: "Cartilha", url: "#", size: "4.5 MB" },
+  { id: "mat2", title: "Protocolos de Encaminhamento TCDF", type: "PDF", url: "#", size: "1.2 MB" },
+  { id: "mat3", title: "Técnicas de Respiração", type: "Guia", url: "#", size: "2.1 MB" },
+  { id: "mat4", title: "Comunicação Não Violenta no Trabalho", type: "PDF", url: "#", size: "3.5 MB" },
 ];

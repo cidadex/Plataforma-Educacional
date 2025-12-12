@@ -1,9 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { 
-  LayoutDashboard, 
   BookOpen, 
-  Library, 
+  BookHeart,
   Calendar, 
   MessageSquare, 
   User, 
@@ -11,7 +10,8 @@ import {
   Menu,
   X,
   Bell,
-  Search
+  Search,
+  Heart
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -36,12 +36,12 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/student/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-    { href: "/student/modules", icon: BookOpen, label: "Meus Módulos" },
-    { href: "/student/library", icon: Library, label: "Biblioteca" },
-    { href: "/student/calendar", icon: Calendar, label: "Agenda ao Vivo" },
-    { href: "/student/support", icon: MessageSquare, label: "Atendimento" },
-    { href: "/student/profile", icon: User, label: "Meu Perfil" },
+    { href: "/student/dashboard", icon: Heart, label: "Meu Bem-estar" },
+    { href: "/student/modules", icon: BookOpen, label: "Módulos do Programa" },
+    { href: "/student/library", icon: BookHeart, label: "Materiais de Apoio" },
+    { href: "/student/calendar", icon: Calendar, label: "Agenda de Encontros" },
+    { href: "/student/support", icon: MessageSquare, label: "Suporte / Acolhimento" },
+    { href: "/student/profile", icon: User, label: "Perfil do Servidor" },
   ];
 
   return (
@@ -61,12 +61,12 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       )}>
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="h-16 flex items-center px-6 border-b border-sidebar-border bg-sidebar-accent/10">
-            <div className="flex items-center gap-2 font-heading font-bold text-xl text-primary-foreground tracking-tight">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
-                <BookOpen size={18} />
+          <div className="h-20 flex items-center px-6 border-b border-sidebar-border bg-sidebar-accent/10">
+            <div className="flex items-center gap-3 font-heading font-bold text-lg text-primary-foreground tracking-tight leading-tight">
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shrink-0">
+                <Heart size={20} className="fill-white" />
               </div>
-              <span>Institucional</span>
+              <span>Saúde Mental é o que Conta</span>
             </div>
             <Button 
               variant="ghost" 
@@ -83,7 +83,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <a className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group relative overflow-hidden",
+                  "flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 group relative overflow-hidden",
                   location === item.href 
                     ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-md" 
                     : "text-sidebar-foreground/80 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
@@ -103,11 +103,11 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             <div className="flex items-center gap-3">
               <Avatar>
                 <AvatarImage src={currentUser.avatar} />
-                <AvatarFallback>AS</AvatarFallback>
+                <AvatarFallback>MS</AvatarFallback>
               </Avatar>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium truncate text-sidebar-foreground">{currentUser.name}</p>
-                <p className="text-xs text-sidebar-foreground/60 truncate">{currentUser.email}</p>
+                <p className="text-xs text-sidebar-foreground/60 truncate">TCDF - Servidor</p>
               </div>
               <Link href="/login">
                 <Button variant="ghost" size="icon" className="text-sidebar-foreground/70 hover:text-destructive">
@@ -147,7 +147,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input 
                 type="search" 
-                placeholder="Buscar módulos, aulas..." 
+                placeholder="Buscar temas..." 
                 className="pl-9 bg-secondary/30 border-secondary-foreground/10 focus-visible:ring-primary/20 h-9"
               />
             </div>
@@ -164,7 +164,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
                 <Button variant="ghost" className="hidden sm:flex gap-2 pl-2 pr-3 h-9 rounded-full border border-border bg-card hover:bg-accent/50">
                   <Avatar className="h-6 w-6">
                     <AvatarImage src={currentUser.avatar} />
-                    <AvatarFallback>AS</AvatarFallback>
+                    <AvatarFallback>MS</AvatarFallback>
                   </Avatar>
                   <span className="text-sm font-medium">Minha Conta</span>
                 </Button>

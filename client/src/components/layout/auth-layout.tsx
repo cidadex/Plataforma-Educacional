@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { BookOpen } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,24 +14,29 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         />
         
         <div className="relative z-10 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg">
-            <BookOpen size={24} />
+          <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg">
+            <Heart size={24} className="fill-white" />
           </div>
-          <span className="font-heading font-bold text-2xl tracking-tight">Institucional</span>
+          <span className="font-heading font-bold text-2xl tracking-tight">Saúde Mental é o que Conta</span>
         </div>
 
-        <div className="relative z-10 max-w-md space-y-4">
+        <div className="relative z-10 max-w-md space-y-6">
           <h2 className="font-heading text-4xl leading-tight">
-            Excelência no Ensino e <br/>
-            <span className="text-primary">Gestão do Conhecimento</span>
+            Programa de Saúde Mental <br/>
+            <span className="text-primary">do TCDF</span>
           </h2>
-          <p className="text-lg text-sidebar-foreground/80">
-            Acesse nossa plataforma para desenvolver suas habilidades e acompanhar seu progresso profissional.
+          <p className="text-lg text-sidebar-foreground/80 leading-relaxed">
+            "Ações estruturadas de cuidado e educação em saúde mental são essenciais para a prevenção do adoecimento e fortalecimento do clima organizacional."
           </p>
+          <div className="pt-4 flex gap-4 text-sm font-medium opacity-70">
+            <span className="flex items-center gap-2">✓ Autocuidado</span>
+            <span className="flex items-center gap-2">✓ Resiliência</span>
+            <span className="flex items-center gap-2">✓ Bem-estar</span>
+          </div>
         </div>
 
         <div className="relative z-10 text-sm text-sidebar-foreground/50">
-          © 2025 Plataforma Institucional. Todos os direitos reservados.
+          © 2025 Kaká Ribeiro - Consultoria Saúde Mental.
         </div>
       </div>
 
