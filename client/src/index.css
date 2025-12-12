@@ -57,57 +57,55 @@
 
 :root {
   /* 
-   * OLIVE GARDEN PALETTE - REFINED
-   * Based on: Cream, Beige, Sage, Olive, Dark Earth
+   * OLIVE GARDEN PALETTE - REFINED & EXPANDED
+   * Now including the "Rosy Beige" and lighter tones requested
    */
 
-  /* Background: Cream/Off-White (Warm) */
-  --background: 40 25% 94%; 
+  /* Background: Cream/Off-White (Warm) - The lightest swatch */
+  --background: 40 30% 96%; /* #F9F7F2 */
   
-  /* Text: Deep Earthy Green (Almost Black) */
-  --foreground: 90 20% 15%;
+  /* Text: Deep Earthy Green (Almost Black) - The darkest swatch */
+  --foreground: 90 20% 15%; /* #252C24 */
 
-  /* Cards: White/Very Light Beige */
-  --card: 40 20% 98%;
+  /* Cards: White/Very Light Cream */
+  --card: 40 30% 98%;
   --card-foreground: 90 20% 15%;
 
   /* Popovers */
-  --popover: 40 20% 98%;
+  --popover: 40 30% 98%;
   --popover-foreground: 90 20% 15%;
 
-  /* Primary: The Main "Olive" Green */
-  /* A rich, grounded olive green, not too bright */
-  --primary: 95 28% 40%;
+  /* Primary: The Main "Olive" Green - 4th Swatch */
+  --primary: 95 28% 40%; /* #5E6D4E */
   --primary-foreground: 40 30% 96%;
 
-  /* Secondary: Sage / Soft Green */
-  /* Used for backgrounds, tags, secondary actions */
-  --secondary: 95 20% 85%;
+  /* Secondary: The "Rosy/Sandy Beige" - 2nd Swatch */
+  /* This was previously Sage, now updated to the warm rosy beige requested */
+  --secondary: 30 25% 85%; /* #E3D5CA (Warm Rosy Beige) */
   --secondary-foreground: 90 30% 20%;
 
-  /* Muted: Sand / Beige */
-  /* Used for disabled states, subtle text */
-  --muted: 35 20% 88%;
-  --muted-foreground: 35 10% 45%;
+  /* Muted: The Sage Green - 3rd Swatch */
+  /* Used for backgrounds, tags, subtle elements */
+  --muted: 95 20% 85%; /* #D6E0CF */
+  --muted-foreground: 95 30% 35%;
 
-  /* Accent: Earthy Brown/Clay */
-  /* Used for highlights that aren't the main green */
-  --accent: 30 25% 80%;
-  --accent-foreground: 90 30% 20%;
+  /* Accent: Warm Earthy Brown - 5th Swatch */
+  --accent: 35 25% 45%; /* #6E624C */
+  --accent-foreground: 40 30% 96%;
 
   /* Destructive: Muted Red/Rust */
   --destructive: 0 45% 45%;
   --destructive-foreground: 40 30% 96%;
 
-  /* Borders: Soft Sage/Beige Mix */
-  --border: 95 15% 80%;
-  --input: 95 15% 80%;
+  /* Borders: Soft Rosy Beige Mix */
+  --border: 30 20% 85%;
+  --input: 30 20% 85%;
   
   /* Ring: Matching Primary Olive */
   --ring: 95 28% 40%;
 
   /* Radius */
-  --radius: 0.5rem;
+  --radius: 0.75rem; /* Slightly softer radius */
 
   /* Sidebar: Deep Forest/Dark Olive (High Contrast) */
   --sidebar: 85 20% 18%;
@@ -125,10 +123,10 @@
   
   /* Charts - Earthy Tones */
   --chart-1: 95 28% 40%; /* Olive */
-  --chart-2: 35 35% 45%; /* Brown */
-  --chart-3: 140 20% 45%; /* Forest */
-  --chart-4: 45 30% 60%; /* Gold/Sand */
-  --chart-5: 25 25% 35%; /* Dark Earth */
+  --chart-2: 30 25% 85%; /* Rosy Beige */
+  --chart-3: 35 25% 45%; /* Earth Brown */
+  --chart-4: 95 20% 85%; /* Sage */
+  --chart-5: 85 20% 18%; /* Dark Forest */
 }
 
 .dark {
@@ -142,16 +140,16 @@
   --popover: 90 15% 13%;
   --popover-foreground: 40 25% 90%;
 
-  --primary: 95 28% 45%; /* Slightly lighter olive for dark mode */
+  --primary: 95 28% 45%; 
   --primary-foreground: 90 20% 10%;
 
-  --secondary: 90 20% 20%;
+  --secondary: 30 20% 25%; /* Darker Rosy Beige */
   --secondary-foreground: 40 25% 90%;
 
   --muted: 90 20% 20%;
   --muted-foreground: 90 10% 60%;
 
-  --accent: 90 20% 25%;
+  --accent: 35 20% 25%;
   --accent-foreground: 40 25% 90%;
 
   --destructive: 0 50% 40%;

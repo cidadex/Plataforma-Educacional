@@ -33,50 +33,53 @@ import AssessmentsListAdmin from "@/pages/admin/assessments-list";
 import AppointmentsAdmin from "@/pages/admin/appointments.tsx";
 
 const Landing = () => (
-  <div className="min-h-screen flex flex-col font-sans bg-[#F5F4EF]">
+  <div className="min-h-screen flex flex-col font-sans bg-background">
     {/* Header */}
-    <header className="px-6 h-20 flex items-center justify-between border-b border-[#E5E0D8] bg-[#F5F4EF]/90 backdrop-blur-md sticky top-0 z-50">
-      <div className="flex items-center gap-2 font-heading text-xl font-bold text-[#252C24]">
-        <Heart className="w-6 h-6 fill-[#5E6D4E] text-[#5E6D4E]" />
+    <header className="px-6 h-24 flex items-center justify-between border-b border-border/40 bg-background/90 backdrop-blur-md sticky top-0 z-50">
+      <div className="flex items-center gap-3 font-heading text-xl font-bold text-foreground">
+        <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+          <Heart className="w-5 h-5 fill-primary text-primary" />
+        </div>
         Saúde Mental é o que Conta
       </div>
       <div className="space-x-4">
-        <Link href="/login"><Button variant="ghost" className="text-base font-medium text-[#5E6D4E] hover:text-[#252C24] hover:bg-[#D6E0CF]/30">Entrar</Button></Link>
-        <Link href="/login"><Button className="rounded-full bg-[#5E6D4E] hover:bg-[#4A573E] text-white shadow-md">Inscrever-se</Button></Link>
+        <Link href="/login"><Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Entrar</Button></Link>
+        <Link href="/login"><Button className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 px-8">Inscrever-se</Button></Link>
       </div>
     </header>
     
     <main className="flex-1">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center text-center px-6 py-28 md:py-36 overflow-hidden">
+      <section className="relative flex flex-col items-center justify-center text-center px-6 py-28 md:py-40 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-[#F5F4EF]"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,#D6E0CF_0%,transparent_60%)] opacity-40"></div>
-        <div className="absolute top-20 right-10 w-64 h-64 bg-[#E8E6D9] rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#D6E0CF] rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div className="absolute inset-0 bg-background"></div>
+        {/* Rosy Beige Gradient Blob */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-secondary/30 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+        {/* Sage Green Blob */}
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-muted/40 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
-        <div className="relative z-10 max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 border border-[#D6E0CF] text-[#5E6D4E] text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-            <ShieldCheck size={16} /> Programa Institucional TCDF
+        <div className="relative z-10 max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border border-secondary text-foreground/80 text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+            <ShieldCheck size={16} className="text-primary" /> Programa Institucional TCDF
           </div>
           
-          <h1 className="font-heading text-6xl md:text-8xl font-bold text-[#252C24] leading-[1.1] tracking-tight">
+          <h1 className="font-heading text-6xl md:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">
             Cuidar de si é <br/>
-            <span className="text-[#5E6D4E] italic font-serif relative">
+            <span className="text-primary italic font-serif relative inline-block">
               valorizar o coletivo
-              <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#D6E0CF] -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+              <svg className="absolute w-[110%] h-4 -bottom-2 -left-[5%] text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 12 100 5" stroke="currentColor" strokeWidth="12" fill="none" opacity="0.6" />
               </svg>
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-[#5C615B] max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed font-light">
             Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-8">
             <Link href="/login">
-              <Button size="lg" className="rounded-full px-12 h-16 text-lg w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-[#252C24] text-white hover:bg-[#1A2019]">
+              <Button size="lg" className="rounded-full px-12 h-16 text-lg w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-foreground text-background hover:bg-foreground/90">
                 <Brain size={22} /> Acessar Plataforma
               </Button>
             </Link>
@@ -84,51 +87,51 @@ const Landing = () => (
         </div>
       </section>
 
-      {/* Impact Data Section */}
-      <section className="py-20 bg-white border-y border-[#E5E0D8]">
+      {/* Impact Data Section - Using the Rosy Beige (Secondary) */}
+      <section className="py-20 bg-secondary/30 border-y border-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-[#E5E0D8]">
+          <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-secondary">
             <div className="space-y-3 px-4">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-[#F5F4EF] rounded-full flex items-center justify-center text-[#5E6D4E]">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-white rounded-2xl rotate-3 flex items-center justify-center text-primary shadow-sm">
                   <Users size={32} />
                 </div>
               </div>
-              <h3 className="text-5xl font-heading font-bold text-[#252C24]">850+</h3>
-              <p className="text-[#5C615B] font-medium text-lg uppercase tracking-wide">Servidores Impactados</p>
+              <h3 className="text-5xl font-heading font-bold text-foreground">850+</h3>
+              <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Servidores Impactados</p>
             </div>
             <div className="space-y-3 px-4 pt-8 md:pt-0">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-[#F5F4EF] rounded-full flex items-center justify-center text-[#5E6D4E]">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-white rounded-2xl -rotate-3 flex items-center justify-center text-primary shadow-sm">
                   <CheckCircle size={32} />
                 </div>
               </div>
-              <h3 className="text-5xl font-heading font-bold text-[#252C24]">92%</h3>
-              <p className="text-[#5C615B] font-medium text-lg uppercase tracking-wide">Aprovação do Programa</p>
+              <h3 className="text-5xl font-heading font-bold text-foreground">92%</h3>
+              <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Aprovação do Programa</p>
             </div>
             <div className="space-y-3 px-4 pt-8 md:pt-0">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-[#F5F4EF] rounded-full flex items-center justify-center text-[#5E6D4E]">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-white rounded-2xl rotate-3 flex items-center justify-center text-primary shadow-sm">
                   <Trophy size={32} />
                 </div>
               </div>
-              <h3 className="text-5xl font-heading font-bold text-[#252C24]">120+</h3>
-              <p className="text-[#5C615B] font-medium text-lg uppercase tracking-wide">Horas de Conteúdo</p>
+              <h3 className="text-5xl font-heading font-bold text-foreground">120+</h3>
+              <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Horas de Conteúdo</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Videos */}
-      <section className="py-24 bg-[#F5F4EF]">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
-              <Badge variant="outline" className="mb-3 bg-white border-[#5E6D4E] text-[#5E6D4E] px-4 py-1">Conteúdos em Destaque</Badge>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#252C24] leading-tight">Vídeos Recomendados</h2>
+              <Badge variant="outline" className="mb-3 bg-secondary/50 border-secondary text-foreground px-4 py-1">Conteúdos em Destaque</Badge>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">Vídeos Recomendados</h2>
             </div>
             <Link href="/login">
-              <Button variant="ghost" className="hidden sm:flex gap-2 text-[#5E6D4E] hover:bg-[#D6E0CF]/30">Ver biblioteca completa <ArrowRight size={16} /></Button>
+              <Button variant="ghost" className="hidden sm:flex gap-2 text-primary hover:bg-secondary/50">Ver biblioteca completa <ArrowRight size={16} /></Button>
             </Link>
           </div>
 
@@ -138,31 +141,28 @@ const Landing = () => (
               { id: 2, title: "Sono Reparador", img: "https://images.unsplash.com/photo-1511295742362-92c96b136184?w=800&q=80" },
               { id: 3, title: "Mindfulness no Trabalho", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" }
             ].map((video) => (
-              <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-white rounded-2xl">
-                <div className="relative aspect-video bg-[#E8E6D9] overflow-hidden">
+              <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-card rounded-2xl">
+                <div className="relative aspect-video bg-muted overflow-hidden">
                   <img 
                     src={video.img} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     alt="Thumbnail"
                   />
-                  <div className="absolute inset-0 bg-[#252C24]/20 group-hover:bg-[#252C24]/30 transition-colors flex items-center justify-center backdrop-blur-[2px] group-hover:backdrop-blur-none">
-                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-[#5E6D4E] shadow-xl transform group-hover:scale-110 transition-transform duration-300">
-                      <PlayCircle size={32} className="fill-[#5E6D4E] text-white" />
+                  <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors flex items-center justify-center backdrop-blur-[2px] group-hover:backdrop-blur-none">
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-xl transform group-hover:scale-110 transition-transform duration-300">
+                      <PlayCircle size={32} className="fill-primary text-white" />
                     </div>
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wide">
-                    12:30
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <div className="text-xs font-bold text-[#5E6D4E] mb-2 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#5E6D4E]"></span> Bem-estar
+                  <div className="text-xs font-bold text-primary mb-2 uppercase tracking-wide flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-secondary"></span> Bem-estar
                   </div>
-                  <h3 className="font-heading font-bold text-xl leading-tight mb-3 text-[#252C24] group-hover:text-[#5E6D4E] transition-colors">
+                  <h3 className="font-heading font-bold text-xl leading-tight mb-3 text-foreground group-hover:text-primary transition-colors">
                     {video.title}
                   </h3>
-                  <p className="text-[#5C615B] text-sm line-clamp-2 leading-relaxed">
-                    Aprenda práticas simples e eficazes para melhorar sua qualidade de vida e produtividade no dia a dia.
+                  <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">
+                    Aprenda práticas simples e eficazes para melhorar sua qualidade de vida e produtividade.
                   </p>
                 </CardContent>
               </Card>
@@ -172,90 +172,83 @@ const Landing = () => (
       </section>
 
       {/* Modules Preview - Know Yourself */}
-      <section className="py-24 bg-white relative">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#F5F4EF] to-transparent"></div>
-        
+      <section className="py-24 bg-gradient-to-b from-secondary/20 to-background relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#252C24] mb-6">Jornada Conheça a Si Mesmo</h2>
-            <p className="text-xl text-[#5C615B] font-light leading-relaxed">
-              Uma série de módulos desenhados para promover o autoconhecimento e o desenvolvimento de competências socioemocionais fundamentais.
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Jornada Conheça a Si Mesmo</h2>
+            <p className="text-xl text-foreground/70 font-light leading-relaxed">
+              Uma série de módulos desenhados para promover o autoconhecimento e o desenvolvimento de competências socioemocionais.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            {/* Card 1 */}
-            <div className="group bg-[#F5F4EF] rounded-3xl p-10 border border-[#E5E0D8] relative overflow-hidden transition-all hover:shadow-xl hover:border-[#D6E0CF]">
+            {/* Card 1 - Rosy Beige Theme */}
+            <div className="group bg-white rounded-3xl p-10 border border-secondary/40 shadow-sm relative overflow-hidden transition-all hover:shadow-xl hover:border-secondary">
                <div className="relative z-10">
-                 <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#5E6D4E] mb-8 group-hover:scale-110 transition-transform duration-300">
-                   <Brain size={28} />
+                 <div className="w-14 h-14 bg-secondary/30 rounded-2xl flex items-center justify-center text-primary-foreground mb-8 group-hover:scale-110 transition-transform duration-300">
+                   <Brain size={28} className="text-foreground" />
                  </div>
-                 <h3 className="text-3xl font-heading font-bold text-[#252C24] mb-4">Inteligência Emocional</h3>
-                 <p className="text-[#5C615B] mb-8 text-lg leading-relaxed">
+                 <h3 className="text-3xl font-heading font-bold text-foreground mb-4">Inteligência Emocional</h3>
+                 <p className="text-foreground/70 mb-8 text-lg leading-relaxed">
                    Compreenda suas emoções e aprenda a gerenciá-las de forma assertiva nas relações profissionais e pessoais.
                  </p>
                  <ul className="space-y-4 mb-10">
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Autoconsciência e regulação
+                   <li className="flex items-center gap-4 text-foreground font-medium">
+                     <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-foreground"><CheckCircle size={14} /></div> Autoconsciência
                    </li>
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Empatia e habilidades sociais
-                   </li>
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Motivação e resiliência
+                   <li className="flex items-center gap-4 text-foreground font-medium">
+                     <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-foreground"><CheckCircle size={14} /></div> Habilidades sociais
                    </li>
                  </ul>
                  <Link href="/login">
-                   <Button className="w-full h-12 rounded-xl bg-[#252C24] text-white hover:bg-[#5E6D4E] transition-colors font-medium text-lg">Começar Módulo</Button>
+                   <Button className="w-full h-12 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white transition-colors font-medium text-lg">Começar Módulo</Button>
                  </Link>
                </div>
-               <div className="absolute top-0 right-0 w-80 h-80 bg-[#D6E0CF] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+               {/* Decorative Rosy Blob */}
+               <div className="absolute top-0 right-0 w-80 h-80 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-100 transition-opacity"></div>
             </div>
 
-            {/* Card 2 */}
-            <div className="group bg-[#F5F4EF] rounded-3xl p-10 border border-[#E5E0D8] relative overflow-hidden transition-all hover:shadow-xl hover:border-[#D6E0CF]">
+            {/* Card 2 - Sage/Olive Theme */}
+            <div className="group bg-white rounded-3xl p-10 border border-muted/40 shadow-sm relative overflow-hidden transition-all hover:shadow-xl hover:border-muted">
                <div className="relative z-10">
-                 <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#5E6D4E] mb-8 group-hover:scale-110 transition-transform duration-300">
-                   <Heart size={28} />
+                 <div className="w-14 h-14 bg-muted/50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                   <Heart size={28} className="text-primary" />
                  </div>
-                 <h3 className="text-3xl font-heading font-bold text-[#252C24] mb-4">Gestão do Estresse</h3>
-                 <p className="text-[#5C615B] mb-8 text-lg leading-relaxed">
-                   Ferramentas práticas para identificar gatilhos de estresse e desenvolver estratégias de enfrentamento saudáveis.
+                 <h3 className="text-3xl font-heading font-bold text-foreground mb-4">Gestão do Estresse</h3>
+                 <p className="text-foreground/70 mb-8 text-lg leading-relaxed">
+                   Ferramentas práticas para identificar gatilhos de estresse e desenvolver estratégias de enfrentamento.
                  </p>
                  <ul className="space-y-4 mb-10">
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Sinais de alerta
+                   <li className="flex items-center gap-4 text-foreground font-medium">
+                     <div className="w-6 h-6 rounded-full bg-muted flex items-center justify-center text-primary"><CheckCircle size={14} /></div> Sinais de alerta
                    </li>
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Técnicas de relaxamento
-                   </li>
-                   <li className="flex items-center gap-4 text-[#252C24] font-medium">
-                     <div className="w-6 h-6 rounded-full bg-[#D6E0CF] flex items-center justify-center text-[#5E6D4E]"><CheckCircle size={14} /></div> Equilíbrio vida-trabalho
+                   <li className="flex items-center gap-4 text-foreground font-medium">
+                     <div className="w-6 h-6 rounded-full bg-muted flex items-center justify-center text-primary"><CheckCircle size={14} /></div> Relaxamento
                    </li>
                  </ul>
                  <Link href="/login">
-                   <Button className="w-full h-12 rounded-xl bg-white border border-[#252C24] text-[#252C24] hover:bg-[#252C24] hover:text-white transition-colors font-medium text-lg">Saiba Mais</Button>
+                   <Button className="w-full h-12 rounded-xl bg-white border border-foreground text-foreground hover:bg-foreground hover:text-white transition-colors font-medium text-lg">Saiba Mais</Button>
                  </Link>
                </div>
-               <div className="absolute top-0 right-0 w-80 h-80 bg-[#E8E6D9] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+               {/* Decorative Sage Blob */}
+               <div className="absolute top-0 right-0 w-80 h-80 bg-muted/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-100 transition-opacity"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-[#252C24] relative overflow-hidden isolate">
+      <section className="py-32 bg-foreground relative overflow-hidden isolate">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#252C24] via-transparent to-[#252C24]/50"></div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-white leading-tight">Pronto para priorizar sua <br/> <span className="text-[#D6E0CF]">saúde mental?</span></h2>
+          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-white leading-tight">Pronto para priorizar sua <br/> <span className="text-secondary">saúde mental?</span></h2>
           <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            Junte-se a centenas de colegas servidores que já estão transformando sua qualidade de vida através do programa.
+            Junte-se a centenas de colegas servidores que já estão transformando sua qualidade de vida.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/login">
-              <Button size="lg" className="h-16 px-10 text-lg font-bold shadow-xl bg-[#5E6D4E] hover:bg-[#4A573E] text-white rounded-full">
+              <Button size="lg" className="h-16 px-10 text-lg font-bold shadow-xl bg-primary hover:bg-primary/90 text-white rounded-full">
                 Fazer Login Institucional
               </Button>
             </Link>
@@ -264,24 +257,24 @@ const Landing = () => (
       </section>
     </main>
     
-    <footer className="py-16 bg-[#1A2019] text-[#E8E6D9] text-sm">
+    <footer className="py-16 bg-sidebar text-sidebar-foreground text-sm">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
         <div className="col-span-1 md:col-span-2 space-y-6">
           <div className="flex items-center gap-3 font-heading text-2xl font-bold text-white">
-            <Heart className="w-8 h-8 fill-[#5E6D4E] text-[#5E6D4E]" />
+            <Heart className="w-8 h-8 fill-primary text-primary" />
             Saúde Mental é o que Conta
           </div>
           <p className="max-w-sm leading-relaxed opacity-70 text-base">
-            Programa institucional do TCDF focado na promoção de saúde, bem-estar e desenvolvimento humano. Cuidando de quem cuida do público.
+            Programa institucional do TCDF focado na promoção de saúde, bem-estar e desenvolvimento humano.
           </p>
         </div>
         <div>
           <h4 className="font-bold text-white text-lg mb-6">Links Rápidos</h4>
           <ul className="space-y-4 text-base opacity-80">
-            <li><a href="#" className="hover:text-[#5E6D4E] transition-colors">Sobre o Programa</a></li>
-            <li><a href="#" className="hover:text-[#5E6D4E] transition-colors">Módulos</a></li>
-            <li><a href="#" className="hover:text-[#5E6D4E] transition-colors">Materiais</a></li>
-            <li><a href="#" className="hover:text-[#5E6D4E] transition-colors">Suporte</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Sobre o Programa</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Módulos</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Materiais</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Suporte</a></li>
           </ul>
         </div>
         <div>
