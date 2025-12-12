@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
 
 // Student Pages
 import ModulesList from "@/pages/student/modules-list";
@@ -138,7 +139,7 @@ const Landing = () => (
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { id: 1, title: "Técnicas de Respiração", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
-              { id: 2, title: "Sono Reparador", img: "https://images.unsplash.com/photo-1541781777631-fa95375ad299?w=800&q=80" },
+              { id: 2, title: "Sono Reparador", img: sleepImage },
               { id: 3, title: "Mindfulness no Trabalho", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" }
             ].map((video) => (
               <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-card rounded-2xl">
