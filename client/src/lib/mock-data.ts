@@ -52,7 +52,7 @@ export interface Lesson {
 export interface Material {
   id: string;
   title: string;
-  type: "PDF" | "Guia" | "Cartilha";
+  type: "PDF" | "Guia" | "Cartilha" | "Manual" | "E-book" | "Livro" | "Norma";
   url: string;
   size: string;
 }
@@ -235,4 +235,7 @@ export const recentMaterials: Material[] = [
   { id: "mat2", title: "Protocolos de Encaminhamento TCDF", type: "PDF", url: "#", size: "1.2 MB" },
   { id: "mat3", title: "Técnicas de Respiração", type: "Guia", url: "#", size: "2.1 MB" },
   { id: "mat4", title: "Comunicação Não Violenta no Trabalho", type: "PDF", url: "#", size: "3.5 MB" },
+  { id: "mat5", title: "Manual de Boas Práticas", type: "Manual", url: "#", size: "5.2 MB" },
+  { id: "mat6", title: "E-book: Mindfulness Diário", type: "E-book", url: "#", size: "8.1 MB" },
+  { id: "mat7", title: "Norma Regulamentadora 01", type: "Norma", url: "#", size: "1.0 MB" },
 ];

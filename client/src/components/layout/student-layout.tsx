@@ -11,7 +11,8 @@ import {
   X,
   Bell,
   Search,
-  Heart
+  Heart,
+  ClipboardCheck
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -39,6 +40,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
     { href: "/student/dashboard", icon: Heart, label: "Meu Bem-estar" },
     { href: "/student/modules", icon: BookOpen, label: "Módulos do Programa" },
     { href: "/student/library", icon: BookHeart, label: "Materiais de Apoio" },
+    { href: "/student/nr1-results", icon: ClipboardCheck, label: "Avaliação NR-1" },
     { href: "/student/calendar", icon: Calendar, label: "Agenda de Encontros" },
     { href: "/student/support", icon: MessageSquare, label: "Suporte / Acolhimento" },
     { href: "/student/profile", icon: User, label: "Perfil do Servidor" },

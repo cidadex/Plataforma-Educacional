@@ -21,6 +21,8 @@ import CalendarPage from "@/pages/student/calendar";
 import SupportPage from "@/pages/student/support";
 import ProfilePage from "@/pages/student/profile";
 import QuizPage from "@/pages/student/quiz";
+import NR1AssessmentPage from "@/pages/student/nr1-assessment";
+import NR1ResultsPage from "@/pages/student/nr1-results";
 
 // Admin Pages
 import UsersList from "@/pages/admin/users-list";
@@ -467,6 +469,8 @@ function Router() {
       <Route path="/student/support" component={SupportPage} />
       <Route path="/student/profile" component={ProfilePage} />
       <Route path="/student/quiz/:id" component={QuizPage} />
+      <Route path="/student/nr1-assessment" component={NR1AssessmentPage} />
+      <Route path="/student/nr1-results" component={NR1ResultsPage} />
 
       {/* Admin Routes */}
       <Route path="/admin/dashboard" component={AdminDashboard} />

@@ -4,8 +4,30 @@ import { FileText, Download, Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 export default function LibraryPage() {
+  const [activeTab, setActiveTab] = useState("Todos");
+  
+  // Create tabs list
+  const tabs = ["Todos", "Manuais", "E-books", "Cartilhas", "Normas"];
+
+  // Filter materials based on active tab
+  // Note: In a real app, 'type' might need to match exactly or be normalized.
+  // Using simple filtering logic here based on the mock data structure.
+  // The mock data currently has types like "PDF", "Cartilha", "Guia", etc.
+  // We'll try to map the tab names to the types in the mock data.
+  
+  const filteredMaterials = activeTab === "Todos" 
+    ? [...recentMaterials, ...recentMaterials, ...recentMaterials] 
+    : [...recentMaterials, ...recentMaterials, ...recentMaterials].filter(item => {
+        if (activeTab === "Manuais") return item.type === "Guia" || item.type === "Manual";
+        if (activeTab === "E-books") return item.type === "E-book" || item.type === "Livro";
+        if (activeTab === "Cartilhas") return item.type === "Cartilha";
+        if (activeTab === "Normas") return item.type === "Norma" || item.type === "PDF"; // Assuming PDF might be norms for now
+        return true;
+    });
+
   return (
     <StudentLayout>
       <div className="space-y-8">
@@ -25,16 +47,26 @@ export default function LibraryPage() {
 
         {/* Categories */}
         <div className="flex gap-2 flex-wrap">
-          <Badge variant="default" className="bg-primary hover:bg-primary/90 cursor-pointer px-4 py-1.5 text-sm">Todos</Badge>
-          <Badge variant="outline" className="cursor-pointer hover:bg-muted px-4 py-1.5 text-sm">Manuais</Badge>
-          <Badge variant="outline" className="cursor-pointer hover:bg-muted px-4 py-1.5 text-sm">E-books</Badge>
-          <Badge variant="outline" className="cursor-pointer hover:bg-muted px-4 py-1.5 text-sm">Cartilhas</Badge>
-          <Badge variant="outline" className="cursor-pointer hover:bg-muted px-4 py-1.5 text-sm">Normas</Badge>
+          {tabs.map((tab) => (
+            <Badge 
+              key={tab}
+              variant={activeTab === tab ? "default" : "outline"} 
+              className={`cursor-pointer px-4 py-1.5 text-sm ${
+                activeTab === tab 
+                  ? "bg-primary hover:bg-primary/90" 
+                  : "hover:bg-muted"
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </Badge>
+          ))}
         </div>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[...recentMaterials, ...recentMaterials, ...recentMaterials].map((item, i) => (
+          {filteredMaterials.length > 0 ? (
+            filteredMaterials.map((item, i) => (
             <div key={`${item.id}-${i}`} className="bg-card border rounded-xl p-5 hover:shadow-lg transition-all group flex flex-col">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center text-secondary-foreground">
@@ -55,7 +87,12 @@ export default function LibraryPage() {
                 </Button>
               </div>
             </div>
-          ))}
+          ))
+          ) : (
+            <div className="col-span-full py-12 text-center text-muted-foreground">
+              <p>Nenhum material encontrado nesta categoria.</p>
+            </div>
+          )}
         </div>
       </div>
     </StudentLayout>
