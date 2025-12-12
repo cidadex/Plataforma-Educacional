@@ -12,6 +12,28 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
 import heroImage from "@assets/generated_images/light,_airy,_professional_wellness_scene_with_specific_sage_and_rose_palette.png";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  Legend,
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis
+} from "recharts";
 
 // Student Pages
 import ModulesList from "@/pages/student/modules-list";
@@ -465,18 +487,71 @@ const CalendarPageIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
 )
 
-const AdminDashboard = () => (
+const AdminDashboard = () => {
+  // Mock Data for Charts
+  const userGrowth = [
+    { month: "Jan", users: 120, active: 80 },
+    { month: "Fev", users: 250, active: 180 },
+    { month: "Mar", users: 380, active: 290 },
+    { month: "Abr", users: 520, active: 410 },
+    { month: "Mai", users: 700, active: 580 },
+    { month: "Jun", users: 850, active: 720 },
+  ];
+
+  const riskDistribution = [
+    { name: "Baixo Risco (Saudável)", value: 65, color: "#5E6D4E" }, // Olive Green
+    { name: "Risco Moderado (Alerta)", value: 25, color: "#E3D5CA" }, // Rosy Beige
+    { name: "Alto Risco (Atenção)", value: 10, color: "#ef4444" }, // Red
+  ];
+
+  const behaviors = [
+    { name: "Sono Irregular", value: 45 },
+    { name: "Sedentarismo", value: 60 },
+    { name: "Ansiedade", value: 30 },
+    { name: "Burnout", value: 15 },
+    { name: "Isolamento", value: 20 },
+  ];
+
+  const radarData = [
+    { subject: 'Bem-estar', A: 120, fullMark: 150 },
+    { subject: 'Estresse', A: 98, fullMark: 150 },
+    { subject: 'Sono', A: 86, fullMark: 150 },
+    { subject: 'Foco', A: 99, fullMark: 150 },
+    { subject: 'Social', A: 85, fullMark: 150 },
+    { subject: 'Resiliência', A: 65, fullMark: 150 },
+  ];
+
+  const appointments = [
+    { id: 1, user: "Ana Silva", type: "Psicologia", date: "Hoje, 14:00", status: "Confirmado" },
+    { id: 2, user: "Carlos Mendes", type: "Mentoria", date: "Hoje, 15:30", status: "Aguardando" },
+    { id: 3, user: "Julia Santos", type: "Psicologia", date: "Amanhã, 09:00", status: "Confirmado" },
+    { id: 4, user: "Roberto Lima", type: "Nutrição", date: "Amanhã, 11:00", status: "Confirmado" },
+  ];
+
+  return (
   <AdminLayout>
-    <h1 className="text-3xl font-heading font-bold mb-6">Painel de Gestão - TCDF</h1>
-    <div className="grid md:grid-cols-4 gap-6">
+    <div className="flex justify-between items-center mb-6">
+      <h1 className="text-3xl font-heading font-bold">Painel de Gestão - TCDF</h1>
+      <div className="text-sm text-muted-foreground">
+        Última atualização: Hoje, 10:30
+      </div>
+    </div>
+
+    {/* Summary Cards */}
+    <div className="grid md:grid-cols-4 gap-6 mb-8">
       <div className="bg-white p-6 rounded-xl border shadow-sm">
         <div className="text-sm text-slate-500 font-medium">Servidores Inscritos</div>
         <div className="text-3xl font-bold text-slate-800 mt-2">850</div>
-        <div className="text-xs text-green-600 mt-1">92% da meta</div>
+        <div className="text-xs text-green-600 mt-1 flex items-center gap-1">
+          <TrendingUpIcon size={12} /> 92% da meta
+        </div>
       </div>
       <div className="bg-white p-6 rounded-xl border shadow-sm">
-        <div className="text-sm text-slate-500 font-medium">Conclusão Média</div>
-        <div className="text-3xl font-bold text-slate-800 mt-2">45%</div>
+        <div className="text-sm text-slate-500 font-medium">Testes Realizados</div>
+        <div className="text-3xl font-bold text-slate-800 mt-2">1,240</div>
+        <div className="text-xs text-green-600 mt-1 flex items-center gap-1">
+          <TrendingUpIcon size={12} /> +15% este mês
+        </div>
       </div>
       <div className="bg-white p-6 rounded-xl border shadow-sm">
         <div className="text-sm text-slate-500 font-medium">Avaliação NPS</div>
@@ -484,11 +559,141 @@ const AdminDashboard = () => (
         <div className="text-xs text-slate-400 mt-1">Excelente</div>
       </div>
       <div className="bg-white p-6 rounded-xl border shadow-sm">
-        <div className="text-sm text-slate-500 font-medium">Certificados Emitidos</div>
-        <div className="text-3xl font-bold text-slate-800 mt-2">120</div>
+        <div className="text-sm text-slate-500 font-medium">Atendimentos</div>
+        <div className="text-3xl font-bold text-slate-800 mt-2">342</div>
+        <div className="text-xs text-slate-400 mt-1">Individuais</div>
       </div>
     </div>
+
+    {/* Charts Row 1 */}
+    <div className="grid md:grid-cols-3 gap-6 mb-8">
+      {/* User Growth */}
+      <div className="bg-white p-6 rounded-xl border shadow-sm col-span-2">
+        <h3 className="font-bold text-lg mb-6">Crescimento de Usuários e Engajamento</h3>
+        <div className="h-[300px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={userGrowth}>
+              <defs>
+                <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#5E6D4E" stopOpacity={0.3}/>
+                  <stop offset="95%" stopColor="#5E6D4E" stopOpacity={0}/>
+                </linearGradient>
+                <linearGradient id="colorActive" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#E3D5CA" stopOpacity={0.5}/>
+                  <stop offset="95%" stopColor="#E3D5CA" stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
+              <XAxis dataKey="month" axisLine={false} tickLine={false} />
+              <YAxis axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+              <Legend verticalAlign="top" height={36}/>
+              <Area type="monotone" dataKey="users" name="Total Inscritos" stroke="#5E6D4E" fillOpacity={1} fill="url(#colorUsers)" strokeWidth={3} />
+              <Area type="monotone" dataKey="active" name="Usuários Ativos" stroke="#D4C5B9" fillOpacity={1} fill="url(#colorActive)" strokeWidth={3} />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      {/* Risk Distribution */}
+      <div className="bg-white p-6 rounded-xl border shadow-sm">
+        <h3 className="font-bold text-lg mb-2">Mapeamento de Risco</h3>
+        <p className="text-xs text-muted-foreground mb-4">Baseado nos testes NR-1 e Sinais</p>
+        <div className="h-[300px] relative">
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={riskDistribution}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={80}
+                paddingAngle={5}
+                dataKey="value"
+              >
+                {riskDistribution.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend verticalAlign="bottom" height={36} />
+            </PieChart>
+          </ResponsiveContainer>
+          {/* Center Text */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center -mt-5">
+            <span className="text-3xl font-bold text-foreground">1.2k</span>
+            <span className="block text-xs text-muted-foreground">Testes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Charts Row 2 */}
+    <div className="grid md:grid-cols-3 gap-6 mb-8">
+       {/* Behavioral Indicators */}
+       <div className="bg-white p-6 rounded-xl border shadow-sm">
+         <h3 className="font-bold text-lg mb-6">Principais Queixas/Comportamentos</h3>
+         <div className="h-[250px]">
+           <ResponsiveContainer width="100%" height="100%">
+             <BarChart data={behaviors} layout="vertical" margin={{ left: 40 }}>
+               <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
+               <XAxis type="number" hide />
+               <YAxis dataKey="name" type="category" width={100} tick={{fontSize: 12}} axisLine={false} tickLine={false} />
+               <Tooltip cursor={{fill: 'transparent'}} />
+               <Bar dataKey="value" fill="#5E6D4E" radius={[0, 4, 4, 0]} barSize={20} />
+             </BarChart>
+           </ResponsiveContainer>
+         </div>
+       </div>
+
+       {/* Profile Radar */}
+       <div className="bg-white p-6 rounded-xl border shadow-sm">
+         <h3 className="font-bold text-lg mb-2">Perfil da Instituição</h3>
+         <div className="h-[250px]">
+           <ResponsiveContainer width="100%" height="100%">
+             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+               <PolarGrid stroke="#e5e5e5" />
+               <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 10 }} />
+               <PolarRadiusAxis angle={30} domain={[0, 150]} tick={false} axisLine={false} />
+               <Radar name="Média TCDF" dataKey="A" stroke="#5E6D4E" fill="#5E6D4E" fillOpacity={0.3} />
+               <Tooltip />
+             </RadarChart>
+           </ResponsiveContainer>
+         </div>
+       </div>
+
+       {/* Appointments List */}
+       <div className="bg-white p-6 rounded-xl border shadow-sm">
+         <div className="flex justify-between items-center mb-6">
+           <h3 className="font-bold text-lg">Atendimentos Individuais</h3>
+           <Badge variant="outline" className="cursor-pointer">Ver todos</Badge>
+         </div>
+         <div className="space-y-4">
+           {appointments.map(app => (
+             <div key={app.id} className="flex items-center justify-between p-3 bg-secondary/10 rounded-lg">
+               <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary border border-secondary/20 font-bold">
+                   {app.user.charAt(0)}
+                 </div>
+                 <div>
+                   <p className="font-bold text-sm text-foreground">{app.user}</p>
+                   <p className="text-xs text-muted-foreground">{app.type} • {app.date}</p>
+                 </div>
+               </div>
+               <Badge className={app.status === 'Confirmado' ? 'bg-green-100 text-green-700 hover:bg-green-200' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'}>
+                 {app.status}
+               </Badge>
+             </div>
+           ))}
+         </div>
+       </div>
+    </div>
   </AdminLayout>
+)};
+
+// Helper Icons
+const TrendingUpIcon = ({size}: {size: number}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
 );
 
 function Router() {
