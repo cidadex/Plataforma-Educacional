@@ -56,107 +56,119 @@
 }
 
 :root {
-  /* Olive Garden Palette Interpretation */
-  /* Cream/Sand Base */
-  --background: 40 30% 96%; 
-  --foreground: 120 15% 15%; /* Dark Olive/Black */
+  /* 
+   * OLIVE GARDEN PALETTE - REFINED
+   * Based on: Cream, Beige, Sage, Olive, Dark Earth
+   */
 
-  /* Cards - Slightly lighter or white */
-  --card: 0 0% 100%;
-  --card-foreground: 120 15% 15%;
+  /* Background: Cream/Off-White (Warm) */
+  --background: 40 25% 94%; 
+  
+  /* Text: Deep Earthy Green (Almost Black) */
+  --foreground: 90 20% 15%;
+
+  /* Cards: White/Very Light Beige */
+  --card: 40 20% 98%;
+  --card-foreground: 90 20% 15%;
 
   /* Popovers */
-  --popover: 0 0% 100%;
-  --popover-foreground: 120 15% 15%;
+  --popover: 40 20% 98%;
+  --popover-foreground: 90 20% 15%;
 
-  /* Primary - Medium Olive Green */
-  --primary: 90 30% 45%;
+  /* Primary: The Main "Olive" Green */
+  /* A rich, grounded olive green, not too bright */
+  --primary: 95 28% 40%;
   --primary-foreground: 40 30% 96%;
 
-  /* Secondary - Sage/Pale Green */
-  --secondary: 95 25% 88%;
-  --secondary-foreground: 120 20% 25%;
+  /* Secondary: Sage / Soft Green */
+  /* Used for backgrounds, tags, secondary actions */
+  --secondary: 95 20% 85%;
+  --secondary-foreground: 90 30% 20%;
 
-  /* Muted - Beige/Tan */
-  --muted: 40 20% 90%;
-  --muted-foreground: 30 10% 40%;
+  /* Muted: Sand / Beige */
+  /* Used for disabled states, subtle text */
+  --muted: 35 20% 88%;
+  --muted-foreground: 35 10% 45%;
 
-  /* Accent - Brown/Earth */
-  --accent: 35 25% 85%;
-  --accent-foreground: 120 15% 15%;
+  /* Accent: Earthy Brown/Clay */
+  /* Used for highlights that aren't the main green */
+  --accent: 30 25% 80%;
+  --accent-foreground: 90 30% 20%;
 
-  /* Destructive */
-  --destructive: 0 60% 50%;
-  --destructive-foreground: 0 0% 98%;
+  /* Destructive: Muted Red/Rust */
+  --destructive: 0 45% 45%;
+  --destructive-foreground: 40 30% 96%;
 
-  /* Borders */
-  --border: 90 15% 85%;
-  --input: 90 15% 85%;
-  --ring: 90 30% 45%;
+  /* Borders: Soft Sage/Beige Mix */
+  --border: 95 15% 80%;
+  --input: 95 15% 80%;
+  
+  /* Ring: Matching Primary Olive */
+  --ring: 95 28% 40%;
 
   /* Radius */
   --radius: 0.5rem;
 
-  /* Sidebar (Admin/Nav) - Darker Olive */
-  --sidebar: 100 20% 20%;
-  --sidebar-foreground: 40 30% 96%;
-  --sidebar-primary: 90 30% 45%;
+  /* Sidebar: Deep Forest/Dark Olive (High Contrast) */
+  --sidebar: 85 20% 18%;
+  --sidebar-foreground: 40 25% 90%;
+  --sidebar-primary: 95 28% 40%;
   --sidebar-primary-foreground: 40 30% 96%;
-  --sidebar-accent: 100 20% 25%;
+  --sidebar-accent: 85 20% 25%;
   --sidebar-accent-foreground: 40 30% 96%;
-  --sidebar-border: 100 20% 25%;
-  --sidebar-ring: 90 30% 45%;
+  --sidebar-border: 85 20% 25%;
+  --sidebar-ring: 95 28% 40%;
 
   /* Fonts */
   --font-sans: "DM Sans", "Inter", sans-serif;
   --font-heading: "Playfair Display", serif;
   
-  /* Charts */
-  --chart-1: 90 30% 45%;
-  --chart-2: 35 40% 50%;
-  --chart-3: 120 20% 30%;
-  --chart-4: 40 30% 60%;
-  --chart-5: 25 30% 40%;
+  /* Charts - Earthy Tones */
+  --chart-1: 95 28% 40%; /* Olive */
+  --chart-2: 35 35% 45%; /* Brown */
+  --chart-3: 140 20% 45%; /* Forest */
+  --chart-4: 45 30% 60%; /* Gold/Sand */
+  --chart-5: 25 25% 35%; /* Dark Earth */
 }
 
 .dark {
-  /* Dark Mode Interpretation */
-  --background: 120 15% 10%;
-  --foreground: 40 30% 90%;
+  /* Dark Mode: Deep Forest Theme */
+  --background: 90 15% 10%;
+  --foreground: 40 25% 90%;
 
-  --card: 120 15% 13%;
-  --card-foreground: 40 30% 90%;
+  --card: 90 15% 13%;
+  --card-foreground: 40 25% 90%;
 
-  --popover: 120 15% 13%;
-  --popover-foreground: 40 30% 90%;
+  --popover: 90 15% 13%;
+  --popover-foreground: 40 25% 90%;
 
-  --primary: 90 30% 45%;
-  --primary-foreground: 40 30% 96%;
+  --primary: 95 28% 45%; /* Slightly lighter olive for dark mode */
+  --primary-foreground: 90 20% 10%;
 
-  --secondary: 100 20% 20%;
-  --secondary-foreground: 40 30% 90%;
+  --secondary: 90 20% 20%;
+  --secondary-foreground: 40 25% 90%;
 
-  --muted: 100 20% 20%;
+  --muted: 90 20% 20%;
   --muted-foreground: 90 10% 60%;
 
-  --accent: 100 20% 25%;
-  --accent-foreground: 40 30% 90%;
+  --accent: 90 20% 25%;
+  --accent-foreground: 40 25% 90%;
 
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 40 30% 90%;
+  --destructive: 0 50% 40%;
+  --destructive-foreground: 40 25% 90%;
 
-  --border: 100 20% 20%;
-  --input: 100 20% 20%;
-  --ring: 90 30% 45%;
+  --border: 90 20% 20%;
+  --input: 90 20% 20%;
+  --ring: 95 28% 45%;
   
-  --sidebar: 120 15% 8%;
-  --sidebar-foreground: 40 30% 90%;
-  --sidebar-primary: 90 30% 45%;
-  --sidebar-primary-foreground: 40 30% 96%;
-  --sidebar-accent: 120 15% 13%;
-  --sidebar-accent-foreground: 40 30% 90%;
-  --sidebar-border: 120 15% 13%;
-  --sidebar-ring: 90 30% 45%;
+  --sidebar: 90 20% 8%;
+  --sidebar-foreground: 40 25% 90%;
+  --sidebar-primary: 95 28% 45%;
+  --sidebar-primary-foreground: 90 20% 10%;
+  --sidebar-accent: 90 20% 15%;
+  --sidebar-accent-foreground: 40 25% 90%;
+  --sidebar-border: 90 20% 15%;
+  --sidebar-ring: 95 28% 45%;
 }
 
 @layer base {
