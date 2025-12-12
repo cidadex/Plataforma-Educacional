@@ -7,7 +7,9 @@ import StudentLayout from "@/components/layout/student-layout";
 import AdminLayout from "@/components/layout/admin-layout";
 import AuthLayout from "@/components/layout/auth-layout";
 import { Button } from "@/components/ui/button";
-import { Brain, Heart, ShieldCheck } from "lucide-react";
+import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 // Student Pages
 import ModulesList from "@/pages/student/modules-list";
@@ -39,31 +41,239 @@ const Landing = () => (
       </div>
       <div className="space-x-4">
         <Link href="/login"><Button variant="ghost" className="text-base font-medium">Entrar</Button></Link>
+        <Link href="/login"><Button className="rounded-full">Inscrever-se</Button></Link>
       </div>
     </header>
-    <main className="flex-1 flex flex-col items-center justify-center text-center p-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background">
-      <div className="max-w-4xl space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-bold uppercase tracking-wider mb-4 border border-secondary-foreground/10">
-          <ShieldCheck size={16} /> Programa Institucional TCDF
+    
+    <main className="flex-1">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center p-10 py-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background">
+        <div className="max-w-4xl space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-bold uppercase tracking-wider mb-4 border border-secondary-foreground/10">
+            <ShieldCheck size={16} /> Programa Institucional TCDF
+          </div>
+          <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-tight tracking-tight">
+            Cuidar de si é <br/>
+            <span className="text-primary italic">valorizar o coletivo</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+            <Link href="/login">
+              <Button size="lg" className="rounded-full px-10 h-14 text-lg w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2">
+                <Brain size={20} /> Acessar Plataforma
+              </Button>
+            </Link>
+          </div>
         </div>
-        <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-tight tracking-tight">
-          Cuidar de si é <br/>
-          <span className="text-primary italic">valorizar o coletivo</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-          <Link href="/login">
-            <Button size="lg" className="rounded-full px-10 h-14 text-lg w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2">
-              <Brain size={20} /> Acessar Plataforma
-            </Button>
-          </Link>
+      </section>
+
+      {/* Impact Data Section */}
+      <section className="py-16 bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600">
+                  <Users size={24} />
+                </div>
+              </div>
+              <h3 className="text-4xl font-bold text-slate-900">850+</h3>
+              <p className="text-slate-600 font-medium">Servidores Impactados</p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                  <CheckCircle size={24} />
+                </div>
+              </div>
+              <h3 className="text-4xl font-bold text-slate-900">92%</h3>
+              <p className="text-slate-600 font-medium">Aprovação do Programa</p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600">
+                  <Trophy size={24} />
+                </div>
+              </div>
+              <h3 className="text-4xl font-bold text-slate-900">120+</h3>
+              <p className="text-slate-600 font-medium">Horas de Conteúdo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Videos */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-end mb-10">
+            <div>
+              <Badge variant="outline" className="mb-2 bg-white">Conteúdos em Destaque</Badge>
+              <h2 className="text-3xl font-heading font-bold text-slate-900">Vídeos Recomendados</h2>
+            </div>
+            <Link href="/login">
+              <Button variant="ghost" className="hidden sm:flex gap-2">Ver biblioteca completa <ArrowRight size={16} /></Button>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <Card key={i} className="overflow-hidden border-0 shadow-md group cursor-pointer hover:shadow-xl transition-all duration-300">
+                <div className="relative aspect-video bg-slate-200">
+                  <img 
+                    src={`https://images.unsplash.com/photo-${i === 1 ? '1544367563-12123d8975d9' : i === 2 ? '1571260899304-421218f7dbde' : '1529333166437-7750a6dd5a70'}?w=800&q=80`} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="Thumbnail"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                    <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg transform group-hover:scale-110 transition-transform">
+                      <PlayCircle size={28} className="fill-white" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded font-medium">
+                    12:30
+                  </div>
+                </div>
+                <CardContent className="p-5">
+                  <div className="text-xs font-bold text-primary mb-2 uppercase tracking-wide">Bem-estar</div>
+                  <h3 className="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">
+                    {i === 1 ? "Técnicas de Respiração para Ansiedade" : i === 2 ? "A Importância do Sono Reparador" : "Mindfulness no Trabalho"}
+                  </h3>
+                  <p className="text-slate-500 text-sm line-clamp-2">
+                    Aprenda práticas simples e eficazes para melhorar sua qualidade de vida e produtividade no dia a dia.
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modules Preview - Know Yourself */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">Jornada Conheça a Si Mesmo</h2>
+            <p className="text-lg text-slate-600">
+              Uma série de módulos desenhados para promover o autoconhecimento e o desenvolvimento de competências socioemocionais.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-secondary/20 rounded-2xl p-8 border border-secondary relative overflow-hidden">
+               <div className="relative z-10">
+                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-6">
+                   <Brain size={24} />
+                 </div>
+                 <h3 className="text-2xl font-bold text-slate-900 mb-3">Inteligência Emocional</h3>
+                 <p className="text-slate-600 mb-6">
+                   Compreenda suas emoções e aprenda a gerenciá-las de forma assertiva nas relações profissionais e pessoais.
+                 </p>
+                 <ul className="space-y-3 mb-8">
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-primary" /> Autoconsciência e regulação
+                   </li>
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-primary" /> Empatia e habilidades sociais
+                   </li>
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-primary" /> Motivação e resiliência
+                   </li>
+                 </ul>
+                 <Link href="/login">
+                   <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">Começar Módulo</Button>
+                 </Link>
+               </div>
+               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            </div>
+
+            <div className="bg-indigo-50/50 rounded-2xl p-8 border border-indigo-100 relative overflow-hidden">
+               <div className="relative z-10">
+                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-indigo-600 mb-6">
+                   <Heart size={24} />
+                 </div>
+                 <h3 className="text-2xl font-bold text-slate-900 mb-3">Gestão do Estresse</h3>
+                 <p className="text-slate-600 mb-6">
+                   Ferramentas práticas para identificar gatilhos de estresse e desenvolver estratégias de enfrentamento saudáveis.
+                 </p>
+                 <ul className="space-y-3 mb-8">
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-indigo-600" /> Identificação de sinais de alerta
+                   </li>
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-indigo-600" /> Técnicas de relaxamento
+                   </li>
+                   <li className="flex items-center gap-3 text-slate-700 text-sm">
+                     <CheckCircle size={16} className="text-indigo-600" /> Equilíbrio vida-trabalho
+                   </li>
+                 </ul>
+                 <Link href="/login">
+                   <Button variant="outline" className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white">Começar Módulo</Button>
+                 </Link>
+               </div>
+               <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Pronto para priorizar sua saúde mental?</h2>
+          <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
+            Junte-se a centenas de colegas servidores que já estão transformando sua qualidade de vida através do programa.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/login">
+              <Button size="lg" variant="secondary" className="h-14 px-8 text-lg font-bold shadow-lg">
+                Fazer Login Institucional
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-transparent border-white text-white hover:bg-white hover:text-primary">
+                Saiba Mais
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer className="py-12 bg-slate-950 text-slate-400 text-sm">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
+        <div className="col-span-1 md:col-span-2">
+          <div className="flex items-center gap-2 font-heading text-xl font-bold text-white mb-4">
+            <Heart className="w-6 h-6 fill-white text-white" />
+            Saúde Mental é o que Conta
+          </div>
+          <p className="max-w-xs leading-relaxed opacity-80">
+            Programa institucional do TCDF focado na promoção de saúde, bem-estar e desenvolvimento humano.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-bold text-white mb-4">Links Rápidos</h4>
+          <ul className="space-y-2">
+            <li><a href="#" className="hover:text-white transition-colors">Sobre o Programa</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Módulos</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Materiais</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Suporte</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold text-white mb-4">Contato</h4>
+          <ul className="space-y-2">
+            <li>suporte@tcdf.df.gov.br</li>
+            <li>(61) 3333-0000</li>
+            <li>Brasília - DF</li>
+          </ul>
         </div>
       </div>
-    </main>
-    <footer className="py-6 text-center text-sm text-muted-foreground bg-stone-50">
-      <p>© 2025 Consultoria Saúde Mental é o que Conta - Kaká Ribeiro. Todos os direitos reservados.</p>
+      <div className="border-t border-slate-800 pt-8 text-center">
+        <p>© 2025 Consultoria Saúde Mental é o que Conta - Kaká Ribeiro. Todos os direitos reservados.</p>
+      </div>
     </footer>
   </div>
 );
