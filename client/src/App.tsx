@@ -11,7 +11,7 @@ import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
-import heroImage from "@assets/stock_images/diverse_office_team__c39336d0.jpg";
+import heroImage from "@assets/generated_images/light,_airy,_professional_wellness_scene_with_specific_sage_and_rose_palette.png";
 
 // Student Pages
 import ModulesList from "@/pages/student/modules-list";
