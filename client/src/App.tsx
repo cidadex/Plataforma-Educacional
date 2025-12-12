@@ -11,6 +11,7 @@ import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
+import heroImage from "@assets/generated_images/warm,_welcoming_mental_health_illustration_with_nature_elements.png";
 
 // Student Pages
 import ModulesList from "@/pages/student/modules-list";
@@ -45,48 +46,87 @@ const Landing = () => (
         </div>
         Saúde Mental é o que Conta
       </div>
-      <div className="space-x-4">
-        <Link href="/login"><Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Entrar</Button></Link>
-        <Link href="/login"><Button className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 px-8">Inscrever-se</Button></Link>
+      <div className="space-x-4 hidden md:flex">
+        <Link href="/login">
+          <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Aluno</Button>
+        </Link>
+        <Link href="/admin/dashboard">
+          <Button className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 px-6">Login Administrador</Button>
+        </Link>
+      </div>
+      {/* Mobile Menu Button - simplified for prototype */}
+      <div className="md:hidden">
+         <Link href="/login"><Button size="sm">Entrar</Button></Link>
       </div>
     </header>
     
     <main className="flex-1">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center text-center px-6 py-28 md:py-40 overflow-hidden">
+      <section className="relative overflow-hidden px-6 py-16 md:py-24 lg:py-32">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-background"></div>
-        {/* Rosy Beige Gradient Blob */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-secondary/30 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
-        {/* Sage Green Blob */}
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-muted/40 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/20 rounded-full blur-3xl opacity-60 pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-muted/30 rounded-full blur-3xl opacity-50 pointer-events-none translate-y-1/3 -translate-x-1/4"></div>
 
-        <div className="relative z-10 max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border border-secondary text-foreground/80 text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-            <ShieldCheck size={16} className="text-primary" /> Programa Institucional TCDF
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Text Content */}
+          <div className="space-y-8 text-left animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border border-secondary text-foreground/80 text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+              <ShieldCheck size={16} className="text-primary" /> Programa Institucional TCDF
+            </div>
+            
+            <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
+              Cuidar de si é <br/>
+              <span className="text-primary italic font-serif relative inline-block">
+                valorizar o coletivo
+                <svg className="absolute w-[110%] h-4 -bottom-2 -left-[5%] text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 5 Q 50 12 100 5" stroke="currentColor" strokeWidth="12" fill="none" opacity="0.6" />
+                </svg>
+              </span>
+            </h1>
+            
+            <p className="text-xl text-foreground/70 leading-relaxed font-light max-w-lg">
+              Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link href="/login">
+                <Button size="lg" className="rounded-full px-8 h-14 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-foreground text-background hover:bg-foreground/90">
+                  <Brain size={20} /> Portal do Servidor
+                </Button>
+              </Link>
+              <Link href="/admin/dashboard">
+                <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-2 hover:bg-secondary/20">
+                  Saiba Mais
+                </Button>
+              </Link>
+            </div>
           </div>
-          
-          <h1 className="font-heading text-6xl md:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">
-            Cuidar de si é <br/>
-            <span className="text-primary italic font-serif relative inline-block">
-              valorizar o coletivo
-              <svg className="absolute w-[110%] h-4 -bottom-2 -left-[5%] text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 12 100 5" stroke="currentColor" strokeWidth="12" fill="none" opacity="0.6" />
-              </svg>
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed font-light">
-            Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-8">
-            <Link href="/login">
-              <Button size="lg" className="rounded-full px-12 h-16 text-lg w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-foreground text-background hover:bg-foreground/90">
-                <Brain size={22} /> Acessar Plataforma
-              </Button>
-            </Link>
+
+          {/* Hero Image */}
+          <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-200 hidden lg:block">
+             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img 
+                  src={heroImage} 
+                  alt="Bem-estar e Saúde Mental" 
+                  className="w-full h-auto object-cover scale-105 hover:scale-100 transition-transform duration-700"
+                />
+                {/* Floating Badge */}
+                <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg flex items-center gap-4 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
+                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shrink-0">
+                     <Heart size={24} className="fill-white" />
+                   </div>
+                   <div>
+                     <p className="font-bold text-foreground text-sm">Acolhimento</p>
+                     <p className="text-xs text-muted-foreground">Suporte especializado disponível para você.</p>
+                   </div>
+                </div>
+             </div>
+             {/* Decorative Elements behind image */}
+             <div className="absolute -z-10 top-10 right-10 w-full h-full border-2 border-primary/20 rounded-[2.5rem] translate-x-4 translate-y-4"></div>
           </div>
+
         </div>
       </section>
 
