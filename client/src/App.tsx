@@ -11,7 +11,7 @@ import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
-import heroImage from "@assets/generated_images/light,_airy,_professional_wellness_scene_with_specific_sage_and_rose_palette.png";
+import heroImage from "@assets/stock_images/diverse_corporate_te_0ffb9fca.jpg";
 import {
   LineChart,
   Line,
@@ -103,18 +103,19 @@ const Landing = () => (
               <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Bem-Estar
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
-              Cuidar de si é <br/>
+            <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
+              Gestão emocional aplicada ao <br/>
               <span className="text-primary italic font-serif relative inline-block">
-                valorizar o coletivo
+                trabalho, à saúde mental
                 <svg className="absolute w-[110%] h-4 -bottom-2 -left-[5%] text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 12 100 5" stroke="currentColor" strokeWidth="12" fill="none" opacity="0.6" />
                 </svg>
               </span>
+              <br/> e ao desempenho profissional
             </h1>
             
             <p className="text-xl text-foreground/70 leading-relaxed font-light max-w-lg">
-              Programa de promoção de saúde emocional, bem-estar e desenvolvimento humano para colaboradores e usuários.
+              Programas estruturados para promover equilíbrio emocional, produtividade e ambientes de trabalho mais saudáveis.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
