@@ -80,11 +80,11 @@ export interface UserProfile {
   department: string;
 }
 
-// Mock Data - Based on "Saúde Mental é o que Conta" Proposal
+// Mock Data - Based on "Saúde Emocional Brasil" Proposal
 export const currentUser: UserProfile = {
   id: "u1",
   name: "Mariana Souza",
-  email: "mariana.souza@tcdf.df.gov.br",
+  email: "mariana.souza@empresa.com.br",
   role: "student",
   avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80",
   progress: 15,
@@ -96,8 +96,8 @@ export const currentUser: UserProfile = {
 export const modules: Module[] = [
   {
     id: "m1",
-    title: "Módulo 1: Fundamentos da Saúde Mental",
-    description: "Conceitos gerais, determinantes da saúde mental e combate ao estigma no serviço público.",
+    title: "Módulo 1: Fundamentos da Saúde Emocional",
+    description: "Conceitos gerais, determinantes da saúde emocional e combate ao estigma.",
     thumbnail: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80",
     progress: 80,
     lessonsCount: 3,
@@ -117,7 +117,7 @@ export const modules: Module[] = [
   {
     id: "m3",
     title: "Módulo 3: Estratégias de Autocuidado e Gestão do Estresse",
-    description: "Sono, alimentação, mindfulness e organização emocional para pausas produtivas.",
+    description: "Sono, alimentação, atenção plena e organização emocional para pausas produtivas.",
     thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
     progress: 0,
     lessonsCount: 4,
@@ -162,19 +162,19 @@ export const lessons: Lesson[] = [
     id: "l1",
     moduleId: "m1",
     title: "Conceitos Gerais e Determinantes",
-    description: "O que é saúde mental além da ausência de doença.",
+    description: "O que é saúde emocional além da ausência de doença.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder
     duration: "1h 20min",
     completed: true,
     attachments: [
-      { id: "mat1", title: "Política Nacional de Atenção à Saúde do Servidor (PNASS)", type: "PDF", url: "#", size: "1.5 MB" }
+      { id: "mat1", title: "Política Nacional de Atenção à Saúde do Trabalhador", type: "PDF", url: "#", size: "1.5 MB" }
     ]
   },
   {
     id: "l2",
     moduleId: "m1",
     title: "Combate ao Estigma",
-    description: "Desmistificando preconceitos sobre saúde mental no ambiente de trabalho.",
+    description: "Desmistificando preconceitos sobre saúde emocional no ambiente de trabalho.",
     videoUrl: "",
     duration: "1h 20min",
     completed: true,
@@ -183,13 +183,13 @@ export const lessons: Lesson[] = [
   {
     id: "l3",
     moduleId: "m1",
-    title: "Relevância no Serviço Público",
-    description: "Impactos da saúde mental na produtividade e clima organizacional.",
+    title: "Relevância no Ambiente de Trabalho",
+    description: "Impactos da saúde emocional na produtividade e clima organizacional.",
     videoUrl: "",
     duration: "1h 20min",
     completed: false,
     attachments: [
-      { id: "mat2", title: "Lei nº 8.112/1990 - Trechos Relevantes", type: "PDF", url: "#", size: "500 KB" }
+      { id: "mat2", title: "Legislação Trabalhista - Trechos Relevantes", type: "PDF", url: "#", size: "500 KB" }
     ]
   },
   // Módulo 2 Sample
@@ -210,7 +210,7 @@ export const lessons: Lesson[] = [
 export const lives: LiveEvent[] = [
   {
     id: "ev1",
-    title: "Aula Magna: Saúde Mental é o que Conta",
+    title: "Aula Magna: Saúde Emocional Brasil",
     date: "2025-12-15",
     time: "14:00",
     instructor: "Kaká Ribeiro",
@@ -220,11 +220,11 @@ export const lives: LiveEvent[] = [
   },
   {
     id: "ev2",
-    title: "Workshop: Práticas de Mindfulness",
+    title: "Workshop: Práticas de Atenção Plena",
     date: "2025-12-20",
     time: "10:00",
     instructor: "Especialista Convidado",
-    description: "Técnicas práticas de respiração e atenção plena para o dia a dia.",
+    description: "Técnicas práticas de respiração e foco para o dia a dia.",
     status: "upcoming",
     joinUrl: "#"
   }
@@ -232,10 +232,10 @@ export const lives: LiveEvent[] = [
 
 export const recentMaterials: Material[] = [
   { id: "mat1", title: "Guia de Autocuidado", type: "Cartilha", url: "#", size: "4.5 MB" },
-  { id: "mat2", title: "Protocolos de Encaminhamento TCDF", type: "PDF", url: "#", size: "1.2 MB" },
+  { id: "mat2", title: "Protocolos de Encaminhamento", type: "PDF", url: "#", size: "1.2 MB" },
   { id: "mat3", title: "Técnicas de Respiração", type: "Guia", url: "#", size: "2.1 MB" },
   { id: "mat4", title: "Comunicação Não Violenta no Trabalho", type: "PDF", url: "#", size: "3.5 MB" },
   { id: "mat5", title: "Manual de Boas Práticas", type: "Manual", url: "#", size: "5.2 MB" },
-  { id: "mat6", title: "E-book: Mindfulness Diário", type: "E-book", url: "#", size: "8.1 MB" },
+  { id: "mat6", title: "E-book: Atenção Plena Diária", type: "E-book", url: "#", size: "8.1 MB" },
   { id: "mat7", title: "Norma Regulamentadora 01", type: "Norma", url: "#", size: "1.0 MB" },
 ];

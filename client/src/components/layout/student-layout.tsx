@@ -68,7 +68,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shrink-0">
                 <Heart size={20} className="fill-white" />
               </div>
-              <span>Saúde Mental é o que Conta</span>
+              <span>Saúde Emocional Brasil</span>
             </div>
             <Button 
               variant="ghost" 
@@ -109,7 +109,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               </Avatar>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium truncate text-sidebar-foreground">{currentUser.name}</p>
-                <p className="text-xs text-sidebar-foreground/60 truncate">TCDF - Servidor</p>
+                <p className="text-xs text-sidebar-foreground/60 truncate">Usuário</p>
               </div>
               <Link href="/login">
                 <Button variant="ghost" size="icon" className="text-sidebar-foreground/70 hover:text-destructive">
@@ -175,7 +175,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
                 <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <Link href="/student/profile">
-                  <DropdownMenuItem>Perfil</DropdownMenuItem>
+                  <DropdownMenuItem>Perfil do Usuário</DropdownMenuItem>
                 </Link>
                 <DropdownMenuItem>Configurações</DropdownMenuItem>
                 <DropdownMenuSeparator />

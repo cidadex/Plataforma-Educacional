@@ -66,11 +66,11 @@ const Landing = () => (
         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
           <Heart className="w-5 h-5 fill-primary text-primary" />
         </div>
-        Saúde Mental é o que Conta
+        Saúde Emocional Brasil
       </div>
       <div className="space-x-4 hidden md:flex">
         <Link href="/login">
-          <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Aluno</Button>
+          <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Usuário</Button>
         </Link>
         <Link href="/admin/dashboard">
           <Button className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 px-6">Login Administrador</Button>
@@ -95,7 +95,7 @@ const Landing = () => (
           {/* Text Content */}
           <div className="space-y-8 text-left animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border border-secondary text-foreground/80 text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-              <ShieldCheck size={16} className="text-primary" /> Programa Institucional TCDF
+              <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Bem-Estar
             </div>
             
             <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
@@ -109,13 +109,13 @@ const Landing = () => (
             </h1>
             
             <p className="text-xl text-foreground/70 leading-relaxed font-light max-w-lg">
-              Programa de promoção de saúde mental, bem-estar ocupacional e desenvolvimento humano para servidores do TCDF.
+              Programa de promoção de saúde emocional, bem-estar e desenvolvimento humano para colaboradores e usuários.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/login">
                 <Button size="lg" className="rounded-full px-8 h-14 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-foreground text-background hover:bg-foreground/90">
-                  <Brain size={20} /> Portal do Servidor
+                  <Brain size={20} /> Portal do Usuário
                 </Button>
               </Link>
               <Link href="/admin/dashboard">
@@ -131,7 +131,7 @@ const Landing = () => (
              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
                   src={heroImage} 
-                  alt="Bem-estar e Saúde Mental" 
+                  alt="Bem-estar e Saúde Emocional" 
                   className="w-full h-auto object-cover scale-105 hover:scale-100 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
@@ -163,7 +163,7 @@ const Landing = () => (
                 </div>
               </div>
               <h3 className="text-5xl font-heading font-bold text-foreground">850+</h3>
-              <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Servidores Impactados</p>
+              <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Usuários Impactados</p>
             </div>
             <div className="space-y-3 px-4 pt-8 md:pt-0">
               <div className="flex justify-center mb-6">
@@ -204,7 +204,7 @@ const Landing = () => (
             {[
               { id: 1, title: "Técnicas de Respiração", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
               { id: 2, title: "Sono Reparador", img: sleepImage },
-              { id: 3, title: "Mindfulness no Trabalho", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" }
+              { id: 3, title: "Atenção Plena no Trabalho", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" }
             ].map((video) => (
               <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-card rounded-2xl">
                 <div className="relative aspect-video bg-muted overflow-hidden">
@@ -307,14 +307,14 @@ const Landing = () => (
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-white leading-tight">Pronto para priorizar sua <br/> <span className="text-secondary">saúde mental?</span></h2>
+          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-white leading-tight">Pronto para priorizar sua <br/> <span className="text-secondary">saúde emocional?</span></h2>
           <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            Junte-se a centenas de colegas servidores que já estão transformando sua qualidade de vida.
+            Junte-se a centenas de colegas que já estão transformando sua qualidade de vida.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/login">
               <Button size="lg" className="h-16 px-10 text-lg font-bold shadow-xl bg-primary hover:bg-primary/90 text-white rounded-full">
-                Fazer Login Institucional
+                Fazer Login
               </Button>
             </Link>
           </div>
@@ -327,10 +327,10 @@ const Landing = () => (
         <div className="col-span-1 md:col-span-2 space-y-6">
           <div className="flex items-center gap-3 font-heading text-2xl font-bold text-white">
             <Heart className="w-8 h-8 fill-primary text-primary" />
-            Saúde Mental é o que Conta
+            Saúde Emocional Brasil
           </div>
           <p className="max-w-sm leading-relaxed opacity-70 text-base">
-            Programa institucional do TCDF focado na promoção de saúde, bem-estar e desenvolvimento humano.
+            Programa nacional focado na promoção de saúde, bem-estar e desenvolvimento humano.
           </p>
         </div>
         <div>
@@ -345,14 +345,14 @@ const Landing = () => (
         <div>
           <h4 className="font-bold text-white text-lg mb-6">Contato</h4>
           <ul className="space-y-4 text-base opacity-80">
-            <li>suporte@tcdf.df.gov.br</li>
+            <li>suporte@saudeemocional.com.br</li>
             <li>(61) 3333-0000</li>
             <li>Brasília - DF</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10 pt-8 text-center opacity-50">
-        <p>© 2025 Consultoria Saúde Mental é o que Conta - Kaká Ribeiro. Todos os direitos reservados.</p>
+        <p>© 2025 Consultoria Saúde Emocional Brasil - Kaká Ribeiro. Todos os direitos reservados.</p>
       </div>
     </footer>
   </div>
@@ -362,13 +362,13 @@ const Login = () => (
   <AuthLayout>
     <div className="space-y-6">
       <div className="space-y-2 text-center">
-        <h1 className="text-3xl font-heading font-bold">Portal do Servidor</h1>
-        <p className="text-muted-foreground">Acesse com suas credenciais institucionais</p>
+        <h1 className="text-3xl font-heading font-bold">Portal do Usuário</h1>
+        <p className="text-muted-foreground">Acesse com suas credenciais</p>
       </div>
       <div className="space-y-4">
         <div className="space-y-2">
-          <label className="text-sm font-medium">Email Institucional</label>
-          <input className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="nome.sobrenome@tcdf.df.gov.br" />
+          <label className="text-sm font-medium">Email</label>
+          <input className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="seu.email@empresa.com.br" />
         </div>
         <div className="space-y-2">
           <div className="flex justify-between items-center">
@@ -394,7 +394,7 @@ const StudentDashboard = () => (
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-heading font-bold text-foreground">Olá, Mariana</h1>
-          <p className="text-muted-foreground mt-1">Bem-vinda ao programa "Saúde Mental é o que Conta".</p>
+          <p className="text-muted-foreground mt-1">Bem-vinda ao programa "Saúde Emocional Brasil".</p>
         </div>
         <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
           <Brain size={18} /> Carga Horária Total: 24h
@@ -445,12 +445,12 @@ const StudentDashboard = () => (
                 <div className="flex justify-between items-start">
                    <div>
                      <span className="text-xs font-bold text-primary uppercase tracking-wide">Módulo 1</span>
-                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Fundamentos da Saúde Mental</h3>
+                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Fundamentos da Saúde Emocional</h3>
                    </div>
                    <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Em andamento</span>
                 </div>
                 <p className="text-muted-foreground mt-2 line-clamp-2">
-                  Conceitos gerais e determinantes da saúde mental, combate ao estigma e desinformação no contexto do serviço público.
+                  Conceitos gerais e determinantes da saúde emocional, combate ao estigma e desinformação no contexto organizacional.
                 </p>
                 <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
                    <span>3 aulas</span>

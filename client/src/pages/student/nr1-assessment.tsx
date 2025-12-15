@@ -81,7 +81,7 @@ export default function NR1AssessmentPage() {
         <div>
           <h1 className="text-3xl font-heading font-bold text-foreground">Avaliação NR-1</h1>
           <p className="text-muted-foreground mt-2">
-            Questionário de rastreio de saúde mental e riscos psicossociais no trabalho.
+            Questionário de rastreio de saúde emocional e riscos psicossociais no trabalho.
           </p>
         </div>
 
