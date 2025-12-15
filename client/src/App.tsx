@@ -63,6 +63,8 @@ import SettingsAdmin from "@/pages/admin/settings";
 import AssessmentsListAdmin from "@/pages/admin/assessments-list";
 import AppointmentsAdmin from "@/pages/admin/appointments.tsx";
 
+import WhyHire from "@/pages/why-hire";
+
 const Landing = () => (
   <div className="min-h-screen flex flex-col font-sans bg-background">
     {/* Header */}
@@ -74,6 +76,9 @@ const Landing = () => (
         Gestão Emocional Brasil
       </div>
       <div className="space-x-4 hidden md:flex">
+        <Link href="/why-hire">
+          <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Por que Contratar</Button>
+        </Link>
         <Link href="/login">
           <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Usuário</Button>
         </Link>
@@ -704,6 +709,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
+      <Route path="/why-hire" component={WhyHire} />
       
       {/* Auth */}
       <Route path="/login" component={Login} />
