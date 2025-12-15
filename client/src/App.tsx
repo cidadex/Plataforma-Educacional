@@ -105,7 +105,7 @@ const Landing = () => (
           {/* Text Content */}
           <div className="space-y-8 text-left animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border border-secondary text-foreground/80 text-sm font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-              <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Bem-Estar
+              <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Gestão Emocional no Trabalho
             </div>
             
             <h1 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
