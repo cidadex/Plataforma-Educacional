@@ -59,19 +59,19 @@ const mockUserData = {
       completedHours: 4.5
     },
     modules: [
-      { id: 1, title: "Fundamentos da Saúde Emocional", status: "Concluído", score: 100, lastAccess: "10/02/2025" },
-      { id: 2, title: "Gestão do Estresse", status: "Concluído", score: 95, lastAccess: "25/02/2025" },
-      { id: 3, title: "Comunicação Não-Violenta", status: "Em andamento", progress: 45, lastAccess: "Hoje" },
-      { id: 4, title: "Liderança Empática", status: "Não iniciado", progress: 0, lastAccess: "-" },
+      { id: 1, title: "Fundamentos da Gestão Emocional Corporativa", status: "Concluído", score: 100, lastAccess: "10/02/2025" },
+      { id: 2, title: "Identificando Burnout e Estresse Ocupacional", status: "Concluído", score: 95, lastAccess: "25/02/2025" },
+      { id: 3, title: "Comunicação Não-Violenta e Feedback", status: "Em andamento", progress: 45, lastAccess: "Hoje" },
+      { id: 4, title: "Liderança e Apoio Emocional", status: "Não iniciado", progress: 0, lastAccess: "-" },
     ],
     tests: [
-      { id: 101, title: "Saúde Financeira", date: "10/12/2025", score: 72, status: "Bom", type: "Centro de Testes" },
-      { id: 102, title: "Avaliação NR-1", date: "15/01/2025", score: 85, status: "Aprovado", type: "Obrigatório" },
-      { id: 103, title: "Saúde do Relacionamento", date: "05/03/2025", score: 60, status: "Atenção", type: "Centro de Testes" }
+      { id: 101, title: "Estresse Financeiro e Produtividade", date: "10/12/2025", score: 72, status: "Bom", type: "Centro de Testes" },
+      { id: 102, title: "Avaliação NR-1 (Riscos Psicossociais)", date: "15/01/2025", score: 85, status: "Aprovado", type: "Obrigatório" },
+      { id: 103, title: "Relacionamentos Interpessoais no Trabalho", date: "05/03/2025", score: 60, status: "Atenção", type: "Centro de Testes" }
     ],
     appointments: [
-      { id: 201, type: "Acolhimento Individual", date: "20/02/2025", professional: "Dra. Juliana", status: "Realizado", notes: "Usuária relatou melhora significativa na ansiedade." },
-      { id: 202, type: "Orientação Financeira", date: "15/03/2025", professional: "Consultor Marcos", status: "Agendado", notes: "-" }
+      { id: 201, type: "Acolhimento Individual", date: "20/02/2025", professional: "Dra. Juliana", status: "Realizado", notes: "Colaboradora relatou melhora significativa na gestão do tempo e ansiedade." },
+      { id: 202, type: "Mentoria de Carreira", date: "15/03/2025", professional: "Consultor Marcos", status: "Agendado", notes: "-" }
     ]
   },
   2: {
@@ -403,17 +403,17 @@ export default function UserDetailsPage() {
                        <AlertCircle size={16} /> Pontos de Atenção
                      </h4>
                      <p className="text-sm text-amber-900">
-                       Usuário apresentou sinais de ansiedade no teste de saúde emocional. Recomendado acompanhamento mensal.
+                       Colaboradora apresentou sinais de estresse no teste de produtividade. Recomendado acompanhamento de liderança.
                      </p>
                    </div>
                    
                    <div className="space-y-2">
                      <p className="text-sm font-medium">Próximas Ações Sugeridas:</p>
                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                       <CheckCircle size={14} className="text-primary" /> Agendar retorno em 30 dias
+                       <CheckCircle size={14} className="text-primary" /> Agendar feedback com gestor
                      </div>
                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                       <CheckCircle size={14} className="text-primary" /> Enviar material sobre mindfulness
+                       <CheckCircle size={14} className="text-primary" /> Enviar material sobre gestão de tempo
                      </div>
                    </div>
                  </CardContent>
