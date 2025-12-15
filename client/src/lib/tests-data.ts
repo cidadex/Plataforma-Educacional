@@ -23,99 +23,99 @@ export interface TestType {
 export const testsData: TestType[] = [
   {
     id: "financial",
-    title: "Saúde Financeira",
-    description: "Avalie sua relação com o dinheiro, controle de gastos e planejamento futuro.",
+    title: "Estresse Financeiro e Produtividade",
+    description: "Avalie como questões financeiras podem estar impactando seu foco e desempenho no trabalho.",
     icon: Wallet,
     color: "text-emerald-600",
     dimensions: [
       { id: "clarity", name: "Clareza", description: "Visão sobre entradas e saídas" },
       { id: "control", name: "Controle", description: "Hábitos e rotinas financeiras" },
       { id: "reserve", name: "Reserva", description: "Preparo para emergências" },
-      { id: "pressure", name: "Impulsos/Pressão", description: "Comportamento emocional" }
+      { id: "focus", name: "Impacto no Foco", description: "Interferência no trabalho" }
     ],
     questions: [
-      { id: 1, text: "Você sabe exatamente quanto ganha e quanto gasta por mês?", dimensionId: "clarity" },
+      { id: 1, text: "Você se pega pensando em contas a pagar durante o horário de trabalho?", dimensionId: "focus" },
       { id: 2, text: "Você consegue pagar todas as suas contas em dia sem entrar no cheque especial?", dimensionId: "control" },
-      { id: 3, text: "Você possui uma reserva financeira para emergências (pelo menos 3 meses de despesas)?", dimensionId: "reserve" },
-      { id: 4, text: "Você costuma fazer compras por impulso quando está triste ou ansioso?", dimensionId: "pressure" },
+      { id: 3, text: "A falta de reserva financeira gera ansiedade que atrapalha sua concentração?", dimensionId: "reserve" },
+      { id: 4, text: "Você sente que precisa trabalhar mais apenas para pagar dívidas?", dimensionId: "focus" },
       { id: 5, text: "Você tem clareza de para onde está indo o seu dinheiro?", dimensionId: "clarity" },
       { id: 6, text: "Você registra seus gastos regularmente?", dimensionId: "control" },
       { id: 7, text: "Você se sente seguro financeiramente em relação ao futuro?", dimensionId: "reserve" },
-      { id: 8, text: "Dívidas tiram o seu sono ou geram ansiedade?", dimensionId: "pressure" },
+      { id: 8, text: "Dívidas tiram o seu sono ou geram ansiedade?", dimensionId: "focus" },
     ]
   },
   {
     id: "relationship",
-    title: "Saúde do Relacionamento",
-    description: "Analise a qualidade da comunicação, confiança e conexão em seus relacionamentos.",
+    title: "Relacionamentos Interpessoais no Trabalho",
+    description: "Analise a qualidade da sua comunicação e convivência com colegas e liderança.",
     icon: Users,
     color: "text-rose-600",
     dimensions: [
-      { id: "communication", name: "Comunicação", description: "Qualidade do diálogo" },
-      { id: "trust", name: "Confiança/Segurança", description: "Base do relacionamento" },
-      { id: "conflict", name: "Conflito e Reparo", description: "Resolução de problemas" },
-      { id: "presence", name: "Presença/Afeto", description: "Tempo de qualidade" }
+      { id: "communication", name: "Comunicação", description: "Clareza e assertividade" },
+      { id: "trust", name: "Confiança", description: "Segurança nas relações" },
+      { id: "conflict", name: "Gestão de Conflitos", description: "Resolução de problemas" },
+      { id: "collaboration", name: "Colaboração", description: "Trabalho conjunto" }
     ],
     questions: [
-      { id: 1, text: "Vocês conseguem conversar sobre problemas sem que vire uma briga?", dimensionId: "communication" },
-      { id: 2, text: "Você sente que pode confiar plenamente no seu parceiro(a)?", dimensionId: "trust" },
-      { id: 3, text: "Após uma discussão, vocês conseguem se reconciliar e resolver a questão?", dimensionId: "conflict" },
-      { id: 4, text: "Vocês dedicam tempo de qualidade um para o outro regularmente?", dimensionId: "presence" },
-      { id: 5, text: "Você se sente ouvido(a) quando expressa seus sentimentos?", dimensionId: "communication" },
-      { id: 6, text: "Você se sente seguro(a) para ser você mesmo(a) na relação?", dimensionId: "trust" },
-      { id: 7, text: "Vocês conseguem chegar a acordos satisfatórios para ambos?", dimensionId: "conflict" },
-      { id: 8, text: "Existe demonstração de carinho e afeto no dia a dia?", dimensionId: "presence" },
+      { id: 1, text: "Você consegue expressar suas opiniões em reuniões sem receio?", dimensionId: "communication" },
+      { id: 2, text: "Você sente que pode confiar nos seus colegas de equipe?", dimensionId: "trust" },
+      { id: 3, text: "Quando surge um conflito, você busca resolver diretamente com a pessoa?", dimensionId: "conflict" },
+      { id: 4, text: "Você se sente confortável para pedir ajuda quando está sobrecarregado?", dimensionId: "collaboration" },
+      { id: 5, text: "Você sente que sua comunicação é bem compreendida pelos outros?", dimensionId: "communication" },
+      { id: 6, text: "Você se sente respeitado(a) pelos seus pares e líderes?", dimensionId: "trust" },
+      { id: 7, text: "Você consegue dar e receber feedbacks de forma construtiva?", dimensionId: "conflict" },
+      { id: 8, text: "Existe um espírito de cooperação na sua equipe?", dimensionId: "collaboration" },
     ]
   },
   {
     id: "team",
-    title: "Trabalho em Equipe",
-    description: "Verifique a sinergia, confiança e eficácia do seu time no ambiente de trabalho.",
+    title: "Clima e Segurança Psicológica",
+    description: "Verifique o nível de segurança para arriscar, aprender e contribuir no seu time.",
     icon: Briefcase,
     color: "text-blue-600",
     dimensions: [
       { id: "roles", name: "Clareza de Papéis", description: "Definição de responsabilidades" },
       { id: "psychsafety", name: "Segurança Psicológica", description: "Liberdade para errar e falar" },
       { id: "coordination", name: "Coordenação", description: "Fluxos e rotinas" },
-      { id: "feedback", name: "Feedback e Melhoria", description: "Aprendizado contínuo" }
+      { id: "feedback", name: "Cultura de Erro", description: "Aprendizado vs Punição" }
     ],
     questions: [
       { id: 1, text: "Está claro para todos quais são suas responsabilidades no time?", dimensionId: "roles" },
-      { id: 2, text: "Você se sente confortável para admitir um erro sem medo de retaliação?", dimensionId: "psychsafety" },
-      { id: 3, text: "O time possui rotinas e fluxos de trabalho bem definidos?", dimensionId: "coordination" },
-      { id: 4, text: "Existe uma cultura de feedback construtivo entre os membros?", dimensionId: "feedback" },
+      { id: 2, text: "No seu time, é seguro assumir um risco e errar?", dimensionId: "psychsafety" },
+      { id: 3, text: "O time possui rotinas e fluxos de trabalho que evitam retrabalho?", dimensionId: "coordination" },
+      { id: 4, text: "Erros são vistos como oportunidades de aprendizado e não apenas punidos?", dimensionId: "feedback" },
       { id: 5, text: "Você sabe exatamente o que se espera do seu trabalho?", dimensionId: "roles" },
-      { id: 6, text: "As pessoas se sentem seguras para propor novas ideias?", dimensionId: "psychsafety" },
+      { id: 6, text: "Ninguém no time agiria de forma a desmerecer seus esforços?", dimensionId: "psychsafety" },
       { id: 7, text: "A comunicação flui bem e todos estão alinhados?", dimensionId: "coordination" },
-      { id: 8, text: "O time aprende com os erros e busca melhorar processos?", dimensionId: "feedback" },
+      { id: 8, text: "Você se sente valorizado pelas suas contribuições?", dimensionId: "feedback" },
     ]
   }
 ];
 
 export const mockTestResults = {
   date: "15/12/2025",
-  score: 72,
+  score: 78,
   status: "Bom",
   dimensions: [
     { name: "Clareza", score: 85, status: "Ótimo" },
-    { name: "Controle", score: 60, status: "Bom" },
-    { name: "Reserva", score: 40, status: "Em ajuste" },
-    { name: "Impulsos", score: 90, status: "Ótimo" }
+    { name: "Controle", score: 70, status: "Bom" },
+    { name: "Reserva", score: 50, status: "Em ajuste" },
+    { name: "Foco no Trabalho", score: 90, status: "Ótimo" }
   ],
   aiDiagnosis: {
-    strengths: "Você possui excelente clareza sobre suas finanças e não age por impulso.",
+    strengths: "Você consegue manter o foco no trabalho apesar dos desafios financeiros.",
     weaknesses: "Sua reserva de emergência ainda é um ponto de atenção.",
-    summary: "Você tem uma boa base, mas precisa focar na consistência da reserva para ter mais tranquilidade.",
-    details: "Percebe-se que você sabe quanto ganha e gasta, o que é fundamental. No entanto, a falta de uma reserva robusta pode gerar insegurança em momentos imprevistos. O controle diário está bom, mas pode melhorar.",
+    summary: "Você tem uma boa separação entre vida financeira e profissional, mas precisa fortalecer sua segurança financeira.",
+    details: "Percebe-se que você não deixa que preocupações financeiras afetem gravemente sua produtividade. No entanto, construir uma reserva maior trará mais tranquilidade e liberdade para tomar decisões de carreira.",
   },
   actionPlan: [
-    { day: 1, action: "Listar todas as despesas fixas do mês." },
-    { day: 1, action: "Definir um valor fixo para poupar assim que receber." },
-    { day: 2, action: "Revisar assinaturas e cancelar o que não usa." },
-    { day: 3, action: "Estabelecer um teto de gastos para lazer." },
-    { day: 4, action: "Pesquisar investimentos de liquidez diária para a reserva." },
-    { day: 5, action: "Criar uma meta visual de quanto quer juntar em 6 meses." },
-    { day: 6, action: "Ler um artigo sobre educação financeira básica." },
-    { day: 7, action: "Fazer um balanço da semana e ajustar o orçamento." }
+    { day: 1, action: "Listar despesas que podem ser reduzidas para aumentar o aporte mensal." },
+    { day: 1, action: "Definir meta de poupança automática no dia do pagamento." },
+    { day: 2, action: "Avaliar se há benefícios corporativos (previdência, etc) não utilizados." },
+    { day: 3, action: "Planejar gastos anuais (IPTU, IPVA) para não ser pego de surpresa." },
+    { day: 4, action: "Revisar objetivos de carreira de curto e médio prazo." },
+    { day: 5, action: "Investigar opções de renda extra ou desenvolvimento profissional." },
+    { day: 6, action: "Ler sobre planejamento financeiro para profissionais." },
+    { day: 7, action: "Fazer um check-in de sentimentos sobre finanças e trabalho." }
   ]
 };

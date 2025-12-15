@@ -425,7 +425,7 @@ const StudentDashboard = () => (
         </div>
         <div className="bg-card p-6 rounded-xl border shadow-sm hover:shadow-md transition-shadow">
           <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider mb-2">Próxima Aula</div>
-          <div className="font-bold text-lg text-foreground line-clamp-2">Sinais Precoces de Sofrimento</div>
+          <div className="font-bold text-lg text-foreground line-clamp-2">Sinais de Burnout</div>
           <Link href="/student/modules/m2">
             <Button variant="link" className="px-0 h-auto mt-2 text-primary">Continuar →</Button>
           </Link>
@@ -450,7 +450,7 @@ const StudentDashboard = () => (
                 <div className="flex justify-between items-start">
                    <div>
                      <span className="text-xs font-bold text-primary uppercase tracking-wide">Módulo 1</span>
-                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Fundamentos da Saúde Emocional</h3>
+                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Fundamentos da Gestão Emocional Corporativa</h3>
                    </div>
                    <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Em andamento</span>
                 </div>
