@@ -124,7 +124,7 @@ const Landing = () => (
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/login">
                 <Button size="lg" className="rounded-full px-8 h-14 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all gap-3 bg-foreground text-background hover:bg-foreground/90">
-                  <Brain size={20} /> Portal do Usuário
+                  <Brain size={20} /> Iniciar Gestão Emocional
                 </Button>
               </Link>
               <Link href="/admin/dashboard">
