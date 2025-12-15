@@ -53,6 +53,7 @@ import TestResultPage from "@/pages/student/tests/test-result";
 
 // Admin Pages
 import UsersList from "@/pages/admin/users-list";
+import UserDetailsPage from "@/pages/admin/user-details";
 import ModulesListAdmin from "@/pages/admin/modules-list";
 import MaterialsListAdmin from "@/pages/admin/materials-list";
 import LivesListAdmin from "@/pages/admin/lives-list";
@@ -728,6 +729,7 @@ function Router() {
       {/* Admin Routes */}
       <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route path="/admin/users" component={UsersList} />
+      <Route path="/admin/users/:id" component={UserDetailsPage} />
       <Route path="/admin/modules" component={ModulesListAdmin} />
       <Route path="/admin/assessments" component={AssessmentsListAdmin} />
       <Route path="/admin/materials" component={MaterialsListAdmin} />

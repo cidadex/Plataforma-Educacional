@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import AdminLayout from "@/components/layout/admin-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -93,7 +94,9 @@ export default function UsersList() {
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Ações</DropdownMenuLabel>
                         <DropdownMenuItem>Editar</DropdownMenuItem>
-                        <DropdownMenuItem>Ver Detalhes</DropdownMenuItem>
+                        <Link href={`/admin/users/${user.id}`}>
+                          <DropdownMenuItem className="cursor-pointer">Ver Detalhes</DropdownMenuItem>
+                        </Link>
                         <DropdownMenuItem className="text-red-600">Desativar</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
