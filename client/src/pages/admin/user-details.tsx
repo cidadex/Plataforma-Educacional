@@ -18,7 +18,8 @@ import {
   Brain,
   MessageSquare,
   ArrowLeft,
-  Download
+  Download,
+  Plus
 } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import NotFound from "@/pages/not-found";
