@@ -107,14 +107,21 @@
   /* Radius */
   --radius: 0.75rem; /* Slightly softer radius */
 
-  /* Sidebar: Deep Forest/Dark Olive (High Contrast) */
-  --sidebar: 85 20% 18%;
-  --sidebar-foreground: 40 25% 90%;
+  /* Sidebar: Light Sage (Inverted as requested) */
+  /* Background: Light Sage/Green */
+  --sidebar: 95 20% 94%;
+  /* Foreground: Dark Forest/Deep Olive */
+  --sidebar-foreground: 85 20% 18%;
+  
+  /* Primary/Active Item: Olive Green */
   --sidebar-primary: 95 28% 40%;
   --sidebar-primary-foreground: 40 30% 96%;
-  --sidebar-accent: 85 20% 25%;
-  --sidebar-accent-foreground: 40 30% 96%;
-  --sidebar-border: 85 20% 25%;
+  
+  /* Accent/Hover: Slightly darker sage */
+  --sidebar-accent: 95 20% 88%;
+  --sidebar-accent-foreground: 85 20% 18%;
+  
+  --sidebar-border: 95 20% 85%;
   --sidebar-ring: 95 28% 40%;
 
   /* Fonts */
