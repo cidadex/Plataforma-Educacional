@@ -12,7 +12,8 @@ import {
   Bell,
   Search,
   Heart,
-  ClipboardCheck
+  ClipboardCheck,
+  Brain
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -38,6 +39,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 
   const navItems = [
     { href: "/student/dashboard", icon: Heart, label: "Meu Bem-estar" },
+    { href: "/student/tests", icon: Brain, label: "Centro de Testes" },
     { href: "/student/modules", icon: BookOpen, label: "Módulos do Programa" },
     { href: "/student/library", icon: BookHeart, label: "Materiais de Apoio" },
     { href: "/student/nr1-results", icon: ClipboardCheck, label: "Avaliação NR-1" },

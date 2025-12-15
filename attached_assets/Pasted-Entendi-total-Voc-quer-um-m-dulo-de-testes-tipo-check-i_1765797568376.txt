@@ -1,0 +1,136 @@
+Entendi total. Você quer um “módulo de testes” (tipo check-ins/avaliações) onde a pessoa responde perguntas e a **IA gera um diagnóstico + plano prático**, e isso vira um **relatório publicado dentro da plataforma** (visível pro usuário e, se quiser, agregados pro admin).
+
+Aqui vai um **método bem seguro, escalável e fácil de prototipar em telas** (e depois codar no Replit).
+
+## Método sugerido: MAPA 3E + Diagnóstico IA (com trilha de ação)
+
+Você cria 3 áreas (os “3 testes”):
+
+1. **Saúde Financeira**
+2. **Saúde do Relacionamento**
+3. **Trabalho em Equipe**
+
+Cada teste segue o mesmo esqueleto:
+
+### 1) Triagem rápida (2–3 perguntas)
+
+Só pra contextualizar (ex.: “qual seu nível de estresse?”, “principal dor hoje?”).
+Isso ajuda a IA a não “viajar”.
+
+### 2) Questionário principal (12 a 20 itens)
+
+Formato Likert (0–4):
+
+* 0 = Nunca
+* 1 = Raramente
+* 2 = Às vezes
+* 3 = Frequentemente
+* 4 = Sempre
+
+Você divide em **4 dimensões** por teste (fica muito organizadinho e fácil pra IA interpretar).
+
+#### A) Financeiro (4 dimensões)
+
+* **Clareza** (sei quanto entra/sai? tenho visão?)
+* **Controle** (tenho hábito, rotina, consistência?)
+* **Reserva** (tenho colchão? evito emergências?)
+* **Impulsos/Pressão** (compras emocionais, dívidas, ansiedade)
+
+#### B) Relacionamento (4 dimensões)
+
+* **Comunicação**
+* **Confiança/segurança**
+* **Conflito e reparo** (briga, reconciliação, acordos)
+* **Presença/afeto** (tempo de qualidade, intimidade, cuidado)
+
+#### C) Trabalho em equipe (4 dimensões)
+
+* **Clareza de papéis**
+* **Confiança psicológica** (posso errar e falar?)
+* **Coordenação** (fluxo, combinados, rotina)
+* **Feedback e melhoria** (aprende ou repete erro?)
+
+### 3) Pontuação + “Termômetro” (0–100)
+
+Você calcula um score por dimensão e um score geral.
+E classifica em faixas (fica lindo na UI):
+
+* **0–39**: Atenção (risco alto)
+* **40–59**: Em ajuste
+* **60–79**: Bom
+* **80–100**: Ótimo
+
+### 4) Diagnóstico IA em 3 blocos (padrão fixo)
+
+Isso é ouro: você controla a saída da IA.
+
+**Bloco 1 — Diagnóstico resumido (5 linhas)**
+
+* “Seu ponto forte é X”
+* “Seu ponto sensível é Y”
+* “O que mais pesa agora é Z”
+
+**Bloco 2 — Explicação (curta e humana)**
+
+* 1 parágrafo por dimensão mais crítica
+
+**Bloco 3 — Plano de 7 dias (ações pequenas)**
+
+* 3 ações por dia no máximo
+* checklist simples (pra gerar aderência)
+
+### 5) Publicação do resultado
+
+* O sistema “publica” o diagnóstico numa página do usuário:
+
+  * data do teste
+  * score geral + por dimensão
+  * texto IA
+  * plano de 7 dias
+  * botão “refazer em 30 dias” / “comparar com teste anterior”
+
+> Importante: se é “saúde mental”, você coloca um aviso: “Isso não substitui atendimento profissional” e, se score muito baixo, sugere procurar suporte.
+
+---
+
+# Como traduz isso em telas (pro protótipo navegável)
+
+Você consegue prototipar esse módulo com poucas telas reaproveitáveis:
+
+1. **Tela “Centro de Testes”**
+   3 cards: Financeiro / Relacionamento / Equipe
+
+* histórico dos últimos resultados
+
+2. **Tela “Instruções do teste”**
+   tempo estimado + aviso + botão iniciar
+
+3. **Tela do questionário (wizard)**
+   barra de progresso (ex.: 7/20)
+   perguntas em cards (0–4)
+
+4. **Tela “Resultado”**
+   score geral + 4 dimensões
+   termômetro + texto IA (3 blocos)
+
+5. **Tela “Plano de 7 dias”**
+   checklist por dia + “marcar como concluído”
+
+6. **Tela “Histórico & Comparação”**
+   linha do tempo + comparação simples (antes/depois)
+
+7. **Tela Admin (agregado)** *(opcional na prototipagem)*
+   percentuais por faixa (sem dados pessoais) + downloads
+
+---
+
+# Texto curtinho pra você pedir no Replit (quando for codar)
+
+* “Gerar diagnóstico e plano seguindo um template fixo”
+* “Não permitir aconselhamento médico”
+* “Usar scores como base e não inventar fatos”
+* “Guardar versão do resultado (auditável)”
+
+---
+
+Se você quiser, eu já te devolvo um **mapa de perguntas (20 itens) para cada teste** (Financeiro, Relacionamento, Equipe), prontinho pra virar UI — e já com os nomes das dimensões pra ficar chique no protótipo.

@@ -46,6 +46,10 @@ import ProfilePage from "@/pages/student/profile";
 import QuizPage from "@/pages/student/quiz";
 import NR1AssessmentPage from "@/pages/student/nr1-assessment";
 import NR1ResultsPage from "@/pages/student/nr1-results";
+import TestsCenterPage from "@/pages/student/tests/tests-center";
+import TestIntroPage from "@/pages/student/tests/test-intro";
+import TestQuestionsPage from "@/pages/student/tests/test-questions";
+import TestResultPage from "@/pages/student/tests/test-result";
 
 // Admin Pages
 import UsersList from "@/pages/admin/users-list";
@@ -716,6 +720,10 @@ function Router() {
       <Route path="/student/quiz/:id" component={QuizPage} />
       <Route path="/student/nr1-assessment" component={NR1AssessmentPage} />
       <Route path="/student/nr1-results" component={NR1ResultsPage} />
+      <Route path="/student/tests" component={TestsCenterPage} />
+      <Route path="/student/tests/:type/intro" component={TestIntroPage} />
+      <Route path="/student/tests/:type/questions" component={TestQuestionsPage} />
+      <Route path="/student/tests/:type/result/:id" component={TestResultPage} />
 
       {/* Admin Routes */}
       <Route path="/admin/dashboard" component={AdminDashboard} />
