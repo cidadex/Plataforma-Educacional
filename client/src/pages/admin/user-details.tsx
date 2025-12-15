@@ -21,6 +21,7 @@ import {
   Download,
   Plus
 } from "lucide-react";
+import React from "react";
 import { Link, useRoute } from "wouter";
 import NotFound from "@/pages/not-found";
 import {
@@ -102,6 +103,11 @@ export default function UserDetailsPage() {
   const user = mockUserData[userId as keyof typeof mockUserData];
 
   if (!user) return <NotFound />;
+
+  // Update page title
+  React.useEffect(() => {
+    document.title = `${user.name} - Detalhes do Usuário`;
+  }, [user.name]);
 
   const attendanceData = [
     { name: 'Concluído', value: user.progress.modulesCompleted },
