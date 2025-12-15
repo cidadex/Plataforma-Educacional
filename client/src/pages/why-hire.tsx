@@ -14,7 +14,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import heroImage from "@assets/generated_images/diverse_team_in_modern_office_with_sage_green_tones.png";
+import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810336269.jpg";
 
 const WhyHire = () => {
   return (

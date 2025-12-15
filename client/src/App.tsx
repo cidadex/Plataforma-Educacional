@@ -11,7 +11,7 @@ import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
-import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810336269.jpg";
+import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810942165.jpg";
 import {
   LineChart,
   Line,
