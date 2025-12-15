@@ -149,8 +149,8 @@ const Landing = () => (
                      <Heart size={24} className="fill-white" />
                    </div>
                    <div>
-                     <p className="font-bold text-foreground text-sm">Acolhimento</p>
-                     <p className="text-xs text-muted-foreground">Suporte especializado disponível para você.</p>
+                     <p className="font-bold text-foreground text-sm">Gestão Emocional nas empresas</p>
+                     <p className="text-xs text-muted-foreground">com base nas normativas da NR-1</p>
                    </div>
                 </div>
              </div>
