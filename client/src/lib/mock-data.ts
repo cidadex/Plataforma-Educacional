@@ -96,8 +96,8 @@ export const currentUser: UserProfile = {
 export const modules: Module[] = [
   {
     id: "m1",
-    title: "Módulo 1: Fundamentos da Saúde Emocional",
-    description: "Conceitos gerais, determinantes da saúde emocional e combate ao estigma.",
+    title: "Módulo 1: Fundamentos da Gestão Emocional Corporativa",
+    description: "Conceitos de saúde mental no trabalho, determinantes organizacionais e combate ao estigma profissional.",
     thumbnail: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80",
     progress: 80,
     lessonsCount: 3,
@@ -106,8 +106,8 @@ export const modules: Module[] = [
   },
   {
     id: "m2",
-    title: "Módulo 2: Identificação de Sinais de Sofrimento",
-    description: "Reconhecimento de sinais precoces, postura ética e fatores de risco e proteção.",
+    title: "Módulo 2: Identificando Burnout e Estresse Ocupacional",
+    description: "Reconhecimento de sinais de esgotamento, postura ética e fatores de risco psicossocial.",
     thumbnail: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&q=80",
     progress: 10,
     lessonsCount: 3,
@@ -116,8 +116,8 @@ export const modules: Module[] = [
   },
   {
     id: "m3",
-    title: "Módulo 3: Estratégias de Autocuidado e Gestão do Estresse",
-    description: "Sono, alimentação, atenção plena e organização emocional para pausas produtivas.",
+    title: "Módulo 3: Gestão de Pressão e Sobrecarga no Trabalho",
+    description: "Técnicas para lidar com prazos, alta demanda e organização emocional em ambientes corporativos.",
     thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
     progress: 0,
     lessonsCount: 4,
@@ -126,8 +126,8 @@ export const modules: Module[] = [
   },
   {
     id: "m4",
-    title: "Módulo 4: Resiliência e Habilidades de Enfrentamento",
-    description: "Desenvolvimento de resiliência, manejo de conflitos e postura frente a adversidades.",
+    title: "Módulo 4: Resiliência Profissional e Tomada de Decisão",
+    description: "Desenvolvimento de maturidade emocional, manejo de conflitos e postura assertiva frente a crises.",
     thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     progress: 0,
     lessonsCount: 3,
@@ -136,8 +136,8 @@ export const modules: Module[] = [
   },
   {
     id: "m5",
-    title: "Módulo 5: Comunicação Acolhedora",
-    description: "Comunicação Não Violenta (CNV), escuta ativa e promoção de vínculos saudáveis.",
+    title: "Módulo 5: Comunicação Não-Violenta e Feedback Construtivo",
+    description: "Técnicas de CNV para liderança, escuta ativa e construção de ambientes psicologicamente seguros.",
     thumbnail: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
     progress: 0,
     lessonsCount: 3,
@@ -146,8 +146,8 @@ export const modules: Module[] = [
   },
   {
     id: "m6",
-    title: "Módulo 6: Protocolos e Encaminhamentos",
-    description: "Fluxos de apoio psicológico e articulação com a rede de saúde.",
+    title: "Módulo 6: Liderança e Apoio Emocional às Equipes",
+    description: "Como líderes podem acolher, orientar e encaminhar colaboradores em sofrimento emocional.",
     thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
     progress: 0,
     lessonsCount: 2,
@@ -161,8 +161,8 @@ export const lessons: Lesson[] = [
   {
     id: "l1",
     moduleId: "m1",
-    title: "Conceitos Gerais e Determinantes",
-    description: "O que é saúde emocional além da ausência de doença.",
+    title: "Saúde Mental e Performance",
+    description: "O que é saúde emocional além da ausência de doença e seu impacto no desempenho.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder
     duration: "1h 20min",
     completed: true,
@@ -173,7 +173,7 @@ export const lessons: Lesson[] = [
   {
     id: "l2",
     moduleId: "m1",
-    title: "Combate ao Estigma",
+    title: "Segurança Psicológica nas Equipes",
     description: "Desmistificando preconceitos sobre saúde emocional no ambiente de trabalho.",
     videoUrl: "",
     duration: "1h 20min",
@@ -183,7 +183,7 @@ export const lessons: Lesson[] = [
   {
     id: "l3",
     moduleId: "m1",
-    title: "Relevância no Ambiente de Trabalho",
+    title: "O Custo do Presenteísmo e Absenteísmo",
     description: "Impactos da saúde emocional na produtividade e clima organizacional.",
     videoUrl: "",
     duration: "1h 20min",
@@ -196,8 +196,8 @@ export const lessons: Lesson[] = [
   {
     id: "l4",
     moduleId: "m2",
-    title: "Sinais Precoces de Sofrimento",
-    description: "Como identificar mudanças de comportamento em si e nos colegas.",
+    title: "Sinais de Burnout",
+    description: "Como identificar mudanças de comportamento e fadiga crônica.",
     videoUrl: "",
     duration: "1h 20min",
     completed: false,
@@ -210,7 +210,7 @@ export const lessons: Lesson[] = [
 export const lives: LiveEvent[] = [
   {
     id: "ev1",
-    title: "Aula Magna: Saúde Emocional Brasil",
+    title: "Aula Magna: O Futuro da Gestão Emocional nas Empresas",
     date: "2025-12-15",
     time: "14:00",
     instructor: "Kaká Ribeiro",
@@ -220,22 +220,22 @@ export const lives: LiveEvent[] = [
   },
   {
     id: "ev2",
-    title: "Workshop: Práticas de Atenção Plena",
+    title: "Workshop: Foco, Atenção e Redução de Ansiedade",
     date: "2025-12-20",
     time: "10:00",
     instructor: "Especialista Convidado",
-    description: "Técnicas práticas de respiração e foco para o dia a dia.",
+    description: "Técnicas práticas de respiração e foco para o dia a dia corporativo.",
     status: "upcoming",
     joinUrl: "#"
   }
 ];
 
 export const recentMaterials: Material[] = [
-  { id: "mat1", title: "Guia de Autocuidado", type: "Cartilha", url: "#", size: "4.5 MB" },
-  { id: "mat2", title: "Protocolos de Encaminhamento", type: "PDF", url: "#", size: "1.2 MB" },
-  { id: "mat3", title: "Técnicas de Respiração", type: "Guia", url: "#", size: "2.1 MB" },
-  { id: "mat4", title: "Comunicação Não Violenta no Trabalho", type: "PDF", url: "#", size: "3.5 MB" },
-  { id: "mat5", title: "Manual de Boas Práticas", type: "Manual", url: "#", size: "5.2 MB" },
-  { id: "mat6", title: "E-book: Atenção Plena Diária", type: "E-book", url: "#", size: "8.1 MB" },
+  { id: "mat1", title: "Guia de Produtividade Sustentável", type: "Cartilha", url: "#", size: "4.5 MB" },
+  { id: "mat2", title: "Protocolos de Apoio ao Colaborador", type: "PDF", url: "#", size: "1.2 MB" },
+  { id: "mat3", title: "Técnicas Rápidas de Descompressão", type: "Guia", url: "#", size: "2.1 MB" },
+  { id: "mat4", title: "Manual de Conflitos e Mediação", type: "PDF", url: "#", size: "3.5 MB" },
+  { id: "mat5", title: "Manual de Clima Organizacional", type: "Manual", url: "#", size: "5.2 MB" },
+  { id: "mat6", title: "E-book: Liderança Empática", type: "E-book", url: "#", size: "8.1 MB" },
   { id: "mat7", title: "Norma Regulamentadora 01", type: "Norma", url: "#", size: "1.0 MB" },
 ];
