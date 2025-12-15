@@ -103,7 +103,7 @@ const Landing = () => (
               <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Bem-Estar
             </div>
             
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
+            <h1 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
               Gestão emocional aplicada ao trabalho, à saúde mental e ao <span className="text-primary italic font-serif relative whitespace-nowrap">
                 desempenho profissional
                 <svg className="absolute w-[105%] h-3 -bottom-1 -left-1 text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
