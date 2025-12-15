@@ -14,6 +14,8 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+import heroImage from "@assets/attached_assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810336269.jpg";
+
 const WhyHire = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background">
@@ -72,7 +74,7 @@ const WhyHire = () => {
             <div className="relative hidden lg:block">
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl opacity-60"></div>
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+                src={heroImage} 
                 alt="Equipe corporativa saudável" 
                 className="relative rounded-3xl shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-all duration-500 z-10"
               />
