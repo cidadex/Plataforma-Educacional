@@ -330,7 +330,7 @@ const Landing = () => (
     <footer className="py-16 bg-sidebar text-sidebar-foreground text-sm">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
         <div className="col-span-1 md:col-span-2 space-y-6">
-          <div className="flex items-center gap-3 font-heading text-2xl font-bold text-white">
+          <div className="flex items-center gap-3 font-heading text-2xl font-bold text-sidebar-foreground">
             <Heart className="w-8 h-8 fill-primary text-primary" />
             Gestão Emocional Brasil
           </div>
@@ -339,7 +339,7 @@ const Landing = () => (
           </p>
         </div>
         <div>
-          <h4 className="font-bold text-white text-lg mb-6">Links Rápidos</h4>
+          <h4 className="font-bold text-sidebar-foreground text-lg mb-6">Links Rápidos</h4>
           <ul className="space-y-4 text-base opacity-80">
             <li><a href="#" className="hover:text-primary transition-colors">Sobre o Programa</a></li>
             <li><a href="#" className="hover:text-primary transition-colors">Módulos</a></li>
@@ -348,7 +348,7 @@ const Landing = () => (
           </ul>
         </div>
         <div>
-          <h4 className="font-bold text-white text-lg mb-6">Contato</h4>
+          <h4 className="font-bold text-sidebar-foreground text-lg mb-6">Contato</h4>
           <ul className="space-y-4 text-base opacity-80">
             <li>suporte@saudeemocional.com.br</li>
             <li>(61) 3333-0000</li>
@@ -356,7 +356,7 @@ const Landing = () => (
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 pt-8 text-center opacity-50">
+      <div className="border-t border-sidebar-foreground/10 pt-8 text-center opacity-50">
         <p>© 2025 Consultoria Gestão Emocional Brasil - Kaká Ribeiro. Todos os direitos reservados.</p>
       </div>
     </footer>
