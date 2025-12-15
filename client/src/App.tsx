@@ -71,7 +71,7 @@ const Landing = () => (
         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
           <Heart className="w-5 h-5 fill-primary text-primary" />
         </div>
-        Saúde Emocional Brasil
+        Gestão Emocional Brasil
       </div>
       <div className="space-x-4 hidden md:flex">
         <Link href="/login">
@@ -207,9 +207,9 @@ const Landing = () => (
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { id: 1, title: "Técnicas de Respiração", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
-              { id: 2, title: "Sono Reparador", img: sleepImage },
-              { id: 3, title: "Atenção Plena no Trabalho", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" }
+              { id: 1, title: "Gestão emocional no ambiente de trabalho", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" },
+              { id: 2, title: "Saúde emocional e desempenho profissional", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
+              { id: 3, title: "Como lidar com pressão e conflitos", img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80" }
             ].map((video) => (
               <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-card rounded-2xl">
                 <div className="relative aspect-video bg-muted overflow-hidden">
@@ -226,13 +226,13 @@ const Landing = () => (
                 </div>
                 <CardContent className="p-6">
                   <div className="text-xs font-bold text-primary mb-2 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-secondary"></span> Bem-estar
+                    <span className="w-2 h-2 rounded-full bg-secondary"></span> Gestão Emocional
                   </div>
                   <h3 className="font-heading font-bold text-xl leading-tight mb-3 text-foreground group-hover:text-primary transition-colors">
                     {video.title}
                   </h3>
                   <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">
-                    Aprenda práticas simples e eficazes para melhorar sua qualidade de vida e produtividade.
+                    Conteúdo estratégico para desenvolvimento profissional e equilíbrio emocional no trabalho.
                   </p>
                 </CardContent>
               </Card>
@@ -332,10 +332,10 @@ const Landing = () => (
         <div className="col-span-1 md:col-span-2 space-y-6">
           <div className="flex items-center gap-3 font-heading text-2xl font-bold text-white">
             <Heart className="w-8 h-8 fill-primary text-primary" />
-            Saúde Emocional Brasil
+            Gestão Emocional Brasil
           </div>
           <p className="max-w-sm leading-relaxed opacity-70 text-base">
-            Programa nacional focado na promoção de saúde, bem-estar e desenvolvimento humano.
+            Programa nacional focado na promoção de saúde, gestão emocional e desenvolvimento humano.
           </p>
         </div>
         <div>
@@ -357,7 +357,7 @@ const Landing = () => (
         </div>
       </div>
       <div className="border-t border-white/10 pt-8 text-center opacity-50">
-        <p>© 2025 Consultoria Saúde Emocional Brasil - Kaká Ribeiro. Todos os direitos reservados.</p>
+        <p>© 2025 Consultoria Gestão Emocional Brasil - Kaká Ribeiro. Todos os direitos reservados.</p>
       </div>
     </footer>
   </div>
@@ -399,7 +399,7 @@ const StudentDashboard = () => (
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-heading font-bold text-foreground">Olá, Mariana</h1>
-          <p className="text-muted-foreground mt-1">Bem-vinda ao programa "Saúde Emocional Brasil".</p>
+          <p className="text-muted-foreground mt-1">Bem-vinda ao programa "Gestão Emocional Brasil".</p>
         </div>
         <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
           <Brain size={18} /> Carga Horária Total: 24h

@@ -70,7 +70,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shrink-0">
                 <Heart size={20} className="fill-white" />
               </div>
-              <span>Saúde Emocional Brasil</span>
+              <span>Gestão Emocional Brasil</span>
             </div>
             <Button 
               variant="ghost" 
