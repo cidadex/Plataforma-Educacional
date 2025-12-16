@@ -1,4 +1,5 @@
-import { Switch, Route, Link } from "wouter";
+import { Switch, Route, Link, Router } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -705,7 +706,18 @@ const TrendingUpIcon = ({size}: {size: number}) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
 );
 
-function Router() {
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Toaster />
+      <Router hook={useHashLocation}>
+        <RouterComponent />
+      </Router>
+    </QueryClientProvider>
+  );
+}
+
+function RouterComponent() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
@@ -746,15 +758,6 @@ function Router() {
       
       <Route component={NotFound} />
     </Switch>
-  );
-}
-
-function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Toaster />
-      <Router />
-    </QueryClientProvider>
   );
 }
 
