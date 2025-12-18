@@ -8,7 +8,7 @@ import StudentLayout from "@/components/layout/student-layout";
 import AdminLayout from "@/components/layout/admin-layout";
 import AuthLayout from "@/components/layout/auth-layout";
 import { Button } from "@/components/ui/button";
-import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star } from "lucide-react";
+import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
@@ -193,6 +193,102 @@ const Landing = () => (
               <h3 className="text-5xl font-heading font-bold text-foreground">120+</h3>
               <p className="text-foreground/70 font-medium text-lg uppercase tracking-wide">Horas de Conteúdo</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Audience Section - NR-1 */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/30 text-primary-foreground text-sm font-bold uppercase tracking-wider mb-6">
+              <ShieldCheck size={14} /> Conformidade NR-1
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Para quem é a NR-1 (NRU)?</h2>
+            <p className="text-xl text-foreground/70 font-light leading-relaxed">
+              A NR-1 é destinada a todas as organizações, instituições e pessoas responsáveis por ambientes de trabalho, independentemente do porte, formato jurídico ou área de atuação.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                  <Building2 size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Empresas e Negócios</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Empresas privadas de todos os tamanhos, microempreendedores, pequenas, médias e grandes corporações.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 2 */}
+            <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-secondary/30 rounded-xl flex items-center justify-center text-foreground mb-6 group-hover:scale-110 transition-transform">
+                  <Landmark size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Setor Público</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Órgãos públicos, autarquias, fundações e empresas governamentais de todas as esferas.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 3 */}
+            <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                  <Stethoscope size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Saúde e Educação</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Instituições de ensino, escolas, universidades, hospitais, clínicas, laboratórios e serviços assistenciais.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 4 */}
+             <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-secondary/30 rounded-xl flex items-center justify-center text-foreground mb-6 group-hover:scale-110 transition-transform">
+                  <Handshake size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Terceiro Setor</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Organizações do Terceiro Setor, ONGs, associações, fundações, cooperativas e entidades comunitárias.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 5 */}
+             <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                  <Laptop size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Modalidades de Trabalho</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Ambientes híbridos, remotos ou presenciais, cartórios extrajudiciais e espaços de coworking.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 6 */}
+             <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-secondary/30 rounded-xl flex items-center justify-center text-foreground mb-6 group-hover:scale-110 transition-transform">
+                  <Users size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">Responsabilidade Social</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Qualquer organização que conte com pessoas trabalhando sob sua responsabilidade, direta ou indireta.
+                </p>
+              </CardContent>
+            </Card>
+
           </div>
         </div>
       </section>
