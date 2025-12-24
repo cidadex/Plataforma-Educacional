@@ -23,6 +23,8 @@ import {
 
 import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810336269.jpg";
 
+import kakaRibeiroImg from "@assets/WhatsApp_Image_2025-12-17_at_11.12.45_1766578519530.jpeg";
+
 const WhyHire = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background">
@@ -159,7 +161,7 @@ const WhyHire = () => {
             <div className="relative order-2 md:order-1">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-secondary/20 aspect-square md:aspect-[4/5] max-w-md mx-auto">
                  <img 
-                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" 
+                   src={kakaRibeiroImg} 
                    alt="Kaká Ribeiro - Especialista WOLLYING" 
                    className="w-full h-full object-cover"
                  />
