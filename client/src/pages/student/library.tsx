@@ -10,21 +10,47 @@ export default function LibraryPage() {
   const [activeTab, setActiveTab] = useState("Todos");
   
   // Create tabs list
-  const tabs = ["Todos", "Manuais", "E-books", "Cartilhas", "Normas"];
+  const tabs = ["Todos", "Wollying", "Manuais", "E-books", "Cartilhas", "Normas"];
+
+  // Mock Wollying materials specifically for the UI
+  const wollyingMaterials = [
+    {
+      id: "w1",
+      title: "Guia de Identificação e Prevenção ao Wollying",
+      type: "Guia",
+      size: "2.4 MB",
+      category: "Wollying"
+    },
+    {
+      id: "w2",
+      title: "Protocolo de Apoio: Cuidado com a Vítima",
+      type: "Protocolo",
+      size: "1.8 MB",
+      category: "Wollying"
+    },
+    {
+      id: "w3",
+      title: "Cartilha: Construindo Relações Seguras",
+      type: "Cartilha",
+      size: "3.1 MB",
+      category: "Wollying"
+    }
+  ];
+
+  // Combine mock data
+  const allMaterials = [...wollyingMaterials, ...recentMaterials];
 
   // Filter materials based on active tab
-  // Note: In a real app, 'type' might need to match exactly or be normalized.
-  // Using simple filtering logic here based on the mock data structure.
-  // The mock data currently has types like "PDF", "Cartilha", "Guia", etc.
-  // We'll try to map the tab names to the types in the mock data.
-  
   const filteredMaterials = activeTab === "Todos" 
-    ? [...recentMaterials, ...recentMaterials, ...recentMaterials] 
-    : [...recentMaterials, ...recentMaterials, ...recentMaterials].filter(item => {
+    ? allMaterials
+    : allMaterials.filter(item => {
+        // Cast to any to safely access properties that might not exist on all types
+        const mat = item as any;
+        if (activeTab === "Wollying") return mat.category === "Wollying" || item.title.toLowerCase().includes("wollying");
         if (activeTab === "Manuais") return item.type === "Guia" || item.type === "Manual";
         if (activeTab === "E-books") return item.type === "E-book" || item.type === "Livro";
         if (activeTab === "Cartilhas") return item.type === "Cartilha";
-        if (activeTab === "Normas") return item.type === "Norma" || item.type === "PDF"; // Assuming PDF might be norms for now
+        if (activeTab === "Normas") return item.type === "Norma" || item.type === "PDF"; 
         return true;
     });
 

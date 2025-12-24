@@ -3,25 +3,41 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, Clock, CheckCircle } from "lucide-react";
+import { MessageSquare, Clock, CheckCircle, HeartHandshake } from "lucide-react";
 
 export default function SupportPage() {
   return (
     <StudentLayout>
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl font-heading font-bold text-foreground">Como podemos ajudar?</h1>
+          <h1 className="text-3xl font-heading font-bold text-foreground">Canal de Apoio e Escuta</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Nossa equipe pedagógica e técnica está pronta para tirar suas dúvidas e auxiliar em sua jornada.
+            Estamos aqui por você. Seja para tirar dúvidas técnicas ou para acolhimento especializado em casos sensíveis.
           </p>
+        </div>
+
+        {/* Wollying Support Card */}
+        <div className="bg-violet-50 border border-violet-100 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center shadow-sm">
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-violet-600 shadow-md shrink-0">
+             <HeartHandshake size={32} />
+          </div>
+          <div className="flex-1 text-center md:text-left space-y-2">
+            <h3 className="text-xl font-bold text-violet-800">Suporte Especializado Wollying</h3>
+            <p className="text-violet-700/80 leading-relaxed">
+              Se você está passando por situações de violência psicológica ou se sente desconfortável no ambiente de trabalho, temos um canal seguro e acolhedor para você.
+            </p>
+          </div>
+          <Button className="bg-violet-600 hover:bg-violet-700 text-white border-none shadow-md shrink-0 whitespace-nowrap">
+            Solicitar Acolhimento
+          </Button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Form */}
           <Card className="border shadow-sm">
             <CardHeader>
-              <CardTitle>Abrir Chamado</CardTitle>
-              <CardDescription>Preencha o formulário abaixo para solicitar atendimento.</CardDescription>
+              <CardTitle>Abrir Chamado Geral</CardTitle>
+              <CardDescription>Preencha o formulário abaixo para outras solicitações.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
@@ -33,6 +49,7 @@ export default function SupportPage() {
                 <label className="text-sm font-medium">Categoria</label>
                 <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                   <option>Dúvida Pedagógica</option>
+                  <option>Apoio Wollying (Sigiloso)</option>
                   <option>Problema Técnico</option>
                   <option>Financeiro</option>
                   <option>Outros</option>

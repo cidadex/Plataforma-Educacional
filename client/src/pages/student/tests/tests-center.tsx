@@ -4,8 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
-import { ArrowRight, Clock, History, AlertCircle } from "lucide-react";
+import { ArrowRight, Clock, History, AlertCircle, ShieldAlert } from "lucide-react";
 import { testsData } from "@/lib/tests-data";
+
+// Add Wollying Test Mock
+const wollyingTest = {
+  id: "wollying-check",
+  title: "Termômetro Wollying",
+  description: "Avaliação leve e segura para identificar sinais de violências sutis no ambiente de trabalho.",
+  icon: ShieldAlert,
+  dimensions: [{id: 'w1', name: 'Ambiente'}, {id: 'w2', name: 'Relações'}, {id: 'w3', name: 'Bem-estar'}],
+  color: 'violet'
+};
 
 export default function TestsCenterPage() {
   return (
@@ -28,6 +38,44 @@ export default function TestsCenterPage() {
 
         {/* Test Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6">
+          {/* Wollying Special Card */}
+          <Card key={wollyingTest.id} className="flex flex-col hover:shadow-lg transition-shadow border-violet-200 overflow-hidden bg-violet-50/30">
+            <div className="h-2 w-full bg-violet-500"></div>
+            <CardHeader>
+              <div className="w-12 h-12 rounded-xl mb-4 flex items-center justify-center bg-violet-100 text-violet-600">
+                <ShieldAlert size={24} />
+              </div>
+              <CardTitle className="font-heading text-xl">{wollyingTest.title}</CardTitle>
+              <CardDescription className="line-clamp-2 mt-2 text-base">
+                {wollyingTest.description}
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                <Clock size={16} />
+                <span>~3 minutos</span>
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs font-medium uppercase text-muted-foreground tracking-wider">Foco:</p>
+                <div className="flex flex-wrap gap-2">
+                  {wollyingTest.dimensions.map(d => (
+                    <Badge key={d.id} variant="secondary" className="font-normal bg-violet-100 hover:bg-violet-200 text-violet-700">
+                      {d.name}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="pt-0 mt-auto">
+              <Link href={`/student/tests/wollying/intro`}>
+                <Button className="w-full group bg-violet-600 hover:bg-violet-700 text-white border-none">
+                  Iniciar Avaliação
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+
           {testsData.map((test) => (
             <Card key={test.id} className="flex flex-col hover:shadow-lg transition-shadow border-secondary/20 overflow-hidden">
               <div className={`h-2 w-full ${test.id === 'financial' ? 'bg-emerald-500' : test.id === 'relationship' ? 'bg-rose-500' : 'bg-blue-500'}`}></div>
