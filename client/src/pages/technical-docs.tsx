@@ -145,6 +145,44 @@ export default function TechnicalDocs() {
                 </p>
               </div>
 
+              {/* Timeline Item 5 */}
+              <div className="relative">
+                <div className="absolute -left-[41px] md:-left-[59px] top-0 w-6 h-6 rounded-full border-4 border-background bg-primary"></div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Marcos Institucionais e Legislativos</h3>
+                <div className="bg-secondary/10 rounded-2xl p-6 md:p-8">
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Aplicação institucional na Câmara Municipal de Três Lagoas/MS.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Fundamentação da primeira iniciativa legislativa municipal sobre WOLLYING no Brasil (São Paulo).</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Base técnica do Projeto de Lei Federal nº 4.330/2024.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Reconhecimento por autoridades públicas, parlamentares e instituições.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Atuação junto à FIESP – Conselho da Mulher da Indústria.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Atuação junto à Virada Feminina Internacional.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">Pedido de registro junto ao INPI, assegurando anterioridade e proteção da marca.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </section>
 
