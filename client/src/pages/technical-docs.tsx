@@ -28,6 +28,20 @@ export default function TechnicalDocs() {
             </div>
           </Link>
         </div>
+        <div className="space-x-4 hidden md:flex">
+            <Link href="/">
+              <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Início</Button>
+            </Link>
+            <Link href="/why-hire">
+              <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Por que Contratar</Button>
+            </Link>
+            <Link href="/login">
+              <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Usuário</Button>
+            </Link>
+            <Link href="/admin/dashboard">
+              <Button className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 px-6">Login Administrador</Button>
+            </Link>
+        </div>
         <div className="md:hidden flex items-center gap-4">
            <Link href="/login"><Button size="sm">Entrar</Button></Link>
            <DropdownMenu>

@@ -41,6 +41,12 @@ const WhyHire = () => {
           </Link>
         </div>
         <div className="space-x-4 hidden md:flex">
+          <Link href="/">
+            <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Início</Button>
+          </Link>
+          <Link href="/technical-docs">
+            <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Documentos Técnicos</Button>
+          </Link>
           <Link href="/login">
             <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Usuário</Button>
           </Link>
