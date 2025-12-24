@@ -230,21 +230,21 @@ export const lessons: Lesson[] = [
 export const lives: LiveEvent[] = [
   {
     id: "ev1",
-    title: "Aula Magna: O Futuro da Gestão Emocional nas Empresas",
+    title: "Masterclass: Protocolo Wollying na Prática",
     date: "2025-12-15",
     time: "14:00",
     instructor: "Kaká Ribeiro",
-    description: "Abertura oficial do programa com a Diretora Geral da consultoria.",
+    description: "Entenda a dinâmica do Wollying e como o Protocolo atua na prevenção e acolhimento.",
     status: "upcoming",
     joinUrl: "#"
   },
   {
     id: "ev2",
-    title: "Workshop: Foco, Atenção e Redução de Ansiedade",
+    title: "Roda de Conversa: Identificando a Violência Silenciosa",
     date: "2025-12-20",
     time: "10:00",
     instructor: "Especialista Convidado",
-    description: "Técnicas práticas de respiração e foco para o dia a dia corporativo.",
+    description: "Um espaço seguro para discutir sinais, compartilhar experiências e aprender estratégias de defesa emocional.",
     status: "upcoming",
     joinUrl: "#"
   }
