@@ -153,6 +153,49 @@ const WhyHire = () => {
           </div>
         </section>
 
+        {/* Kaká Ribeiro & WOLLYING Section */}
+        <section className="py-20 bg-background relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative order-2 md:order-1">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-secondary/20 aspect-square md:aspect-[4/5] max-w-md mx-auto">
+                 <img 
+                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" 
+                   alt="Kaká Ribeiro - Especialista WOLLYING" 
+                   className="w-full h-full object-cover"
+                 />
+                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8">
+                   <p className="text-white font-bold text-2xl">Kaká Ribeiro</p>
+                   <p className="text-secondary font-medium">Pioneira no Protocolo WOLLYING</p>
+                 </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary-foreground text-sm font-bold uppercase tracking-wider">
+                 <ShieldCheck size={14} /> Autoridade Técnica
+              </div>
+              <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+                A única especialista em <span className="text-primary italic font-serif">WOLLYING</span> no Brasil
+              </h2>
+              <div className="space-y-4 text-lg text-foreground/70 font-light leading-relaxed">
+                <p>
+                  A metodologia aplicada na plataforma é fundamentada nos estudos e na prática de <strong>Kaká Ribeiro</strong>, especialista com mais de 20 anos de pioneirismo na identificação e combate à violência psicológica sutil entre mulheres no ambiente corporativo.
+                </p>
+                <p>
+                  O Protocolo WOLLYING não é apenas uma teoria, mas uma ferramenta técnica robusta, validada juridicamente e desenhada para proteger instituições e colaboradores, garantindo compliance e segurança psicológica real.
+                </p>
+              </div>
+              
+              <div className="pt-4">
+                <Link href="/technical-docs">
+                  <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-2 hover:bg-secondary/10 gap-2">
+                    <FileText size={20} /> Ver Documentação Técnica
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Hire Us Section */}
         <section className="py-24 bg-secondary/5">
           <div className="max-w-7xl mx-auto px-6">
