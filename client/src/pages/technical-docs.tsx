@@ -104,6 +104,50 @@ export default function TechnicalDocs() {
           </section>
 
           {/* Inexigibility Section */}
+          {/* Histórico e Reconhecimento Section */}
+          <section className="space-y-8">
+            <h2 className="text-3xl font-heading font-bold text-foreground text-center">Histórico de Aplicação e Reconhecimento</h2>
+            <div className="relative border-l-2 border-primary/20 ml-4 md:ml-12 space-y-12 pl-8 md:pl-12 py-4">
+              
+              {/* Timeline Item 1 */}
+              <div className="relative">
+                <div className="absolute -left-[41px] md:-left-[59px] top-0 w-6 h-6 rounded-full border-4 border-background bg-primary"></div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Consolidação Internacional (+20 anos)</h3>
+                <p className="text-muted-foreground leading-relaxed max-w-3xl">
+                  O fenômeno <strong>WOLLYING</strong> é estudado e reconhecido internacionalmente há mais de duas décadas. Diversos países já possuem jurisprudência e literatura técnica tratando especificamente da dinâmica de violência psicológica perpetrada por mulheres contra mulheres em ambientes hierárquicos.
+                </p>
+              </div>
+
+              {/* Timeline Item 2 */}
+              <div className="relative">
+                <div className="absolute -left-[41px] md:-left-[59px] top-0 w-6 h-6 rounded-full border-4 border-background bg-primary"></div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Introdução no Brasil (2022)</h3>
+                <p className="text-muted-foreground leading-relaxed max-w-3xl">
+                  Em <strong>2022</strong>, a especialista <strong>Kaká Ribeiro</strong> introduziu oficialmente o conceito no Brasil. Identificando a ausência de ferramentas específicas para a realidade cultural brasileira, ela iniciou o desenvolvimento do Protocolo Integrado, adaptando as diretrizes internacionais para a legislação nacional.
+                </p>
+              </div>
+
+              {/* Timeline Item 3 */}
+              <div className="relative">
+                <div className="absolute -left-[41px] md:-left-[59px] top-0 w-6 h-6 rounded-full border-4 border-background bg-primary"></div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Desenvolvimento do Protocolo Integrado</h3>
+                <p className="text-muted-foreground leading-relaxed max-w-3xl">
+                  Criação do <strong>Protocolo Integrado de Aplicação do WOLLYING</strong>, uma metodologia proprietária que une Saúde Mental, Direito Trabalhista e Compliance. Este protocolo foi desenhado para ser a única ferramenta capaz de identificar e tratar o Wollying em conformidade com a Lei nº 14.188/2021 (Violência Psicológica contra a Mulher).
+                </p>
+              </div>
+
+              {/* Timeline Item 4 */}
+              <div className="relative">
+                <div className="absolute -left-[41px] md:-left-[59px] top-0 w-6 h-6 rounded-full border-4 border-background bg-primary"></div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Atualização da NR-1 e Validação Técnica</h3>
+                <p className="text-muted-foreground leading-relaxed max-w-3xl">
+                  Com as recentes atualizações da <strong>NR-1</strong> focadas em riscos psicossociais, o Protocolo WOLLYING se estabeleceu como o padrão ouro para conformidade. A Nota Técnica comprova que a metodologia atende integralmente aos requisitos de prevenção ao assédio e outras violências no âmbito do trabalho.
+                </p>
+              </div>
+
+            </div>
+          </section>
+
           <section className="space-y-8">
             <h2 className="text-3xl font-heading font-bold text-foreground text-center">Inexigibilidade e Singularidade</h2>
             
