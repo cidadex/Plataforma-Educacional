@@ -138,9 +138,9 @@ const Landing = () => (
             </div>
             
             <h1 className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              A Gestão Emocional Brasil desenvolve e aplica o <span className="text-primary italic font-serif relative whitespace-nowrap">
+              A Gestão Emocional Brasil desenvolve e aplica o <span className="text-primary italic font-serif relative">
                 Protocolo Integrado de Aplicação do WOLLYING
-                <svg className="absolute w-[105%] h-3 -bottom-1 -left-1 text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute w-[105%] h-3 -bottom-1 -left-1 text-secondary -z-10 hidden sm:block" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 12 100 5" stroke="currentColor" strokeWidth="12" fill="none" opacity="0.6" />
                 </svg>
               </span>
