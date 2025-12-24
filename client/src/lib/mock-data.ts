@@ -126,7 +126,7 @@ export const modules: Module[] = [
   },
   {
     id: "m3",
-    title: "Módulo 3: Sororidade Corporativa e Redes de Apoio",
+    title: "Módulo 3: Alianças Estratégicas e Redes de Apoio",
     description: "Estratégias para fortalecer a união entre mulheres, mentoria feminina e criação de alianças estratégicas.",
     thumbnail: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80",
     progress: 0,
