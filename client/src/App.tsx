@@ -65,6 +65,7 @@ import AssessmentsListAdmin from "@/pages/admin/assessments-list";
 import AppointmentsAdmin from "@/pages/admin/appointments.tsx";
 
 import WhyHire from "@/pages/why-hire";
+import TechnicalDocs from "@/pages/technical-docs";
 
 const Landing = () => (
   <div className="min-h-screen flex flex-col font-sans bg-background">
@@ -79,6 +80,9 @@ const Landing = () => (
       <div className="space-x-4 hidden md:flex">
         <Link href="/why-hire">
           <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Por que Contratar</Button>
+        </Link>
+        <Link href="/technical-docs">
+          <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Documentos Técnicos</Button>
         </Link>
         <Link href="/login">
           <Button variant="ghost" className="text-base font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50">Login Usuário</Button>
@@ -121,6 +125,13 @@ const Landing = () => (
             <p className="text-xl text-foreground/70 leading-relaxed font-light max-w-lg">
               Programas estruturados para promover equilíbrio emocional, produtividade e ambientes de trabalho mais saudáveis.
             </p>
+
+            <div className="bg-secondary/10 border-l-4 border-primary p-4 rounded-r-lg max-w-xl">
+              <p className="text-sm font-medium text-foreground leading-relaxed">
+                A Gestão Emocional Brasil desenvolve e aplica o <strong>Protocolo Integrado de Aplicação do WOLLYING</strong>, ferramenta técnica voltada à gestão de riscos psicossociais, em conformidade com a NR-1.
+              </p>
+              <p className="text-xs font-bold text-primary mt-2 uppercase tracking-wide">Simples. Jurídico. Forte.</p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/login">
@@ -308,9 +319,9 @@ const Landing = () => (
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { id: 1, title: "Gestão emocional no ambiente de trabalho", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" },
-              { id: 2, title: "Saúde emocional e desempenho profissional", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
-              { id: 3, title: "Como lidar com pressão e conflitos", img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80" }
+              { id: 1, title: "O que é WOLLYING e como identificá-lo", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" },
+              { id: 2, title: "Riscos Psicossociais e a conformidade NR-1", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
+              { id: 3, title: "Gestão Emocional no enfrentamento ao assédio", img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80" }
             ].map((video) => (
               <Card key={video.id} className="overflow-hidden border-0 shadow-lg group cursor-pointer hover:shadow-2xl transition-all duration-300 bg-card rounded-2xl">
                 <div className="relative aspect-video bg-muted overflow-hidden">
@@ -818,6 +829,7 @@ function RouterComponent() {
     <Switch>
       <Route path="/" component={Landing} />
       <Route path="/why-hire" component={WhyHire} />
+      <Route path="/technical-docs" component={TechnicalDocs} />
       
       {/* Auth */}
       <Route path="/login" component={Login} />
