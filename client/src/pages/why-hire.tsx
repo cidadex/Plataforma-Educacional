@@ -120,7 +120,7 @@ const WhyHire = () => {
           <div className="max-w-4xl mx-auto px-6 text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">A realidade que a nova NR-1 precisa enfrentar</h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              As mulheres enfrentam desafios únicos e muitas vezes invisíveis. O <strong>WOLLYING</strong> não é apenas um termo técnico, é a descrição de uma realidade dolorosa de sabotagem, isolamento e violência psicológica sutil que adoece profissionais brilhantes.
+              As mulheres enfrentam desafios únicos e muitas vezes invisíveis. O <strong>WOLLYING</strong> não é apenas um termo técnico, é a descrição de uma realidade dolorosa de sabotagem, isolamento e violência psicológica que adoece profissionais brilhantes.
             </p>
           </div>
 

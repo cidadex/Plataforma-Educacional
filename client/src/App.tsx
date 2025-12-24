@@ -234,7 +234,7 @@ const Landing = () => (
             </div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">O que é WOLLYING?</h2>
             <p className="text-xl text-foreground/70 font-light leading-relaxed mb-6">
-              O WOLLYING designa o fenômeno da violência psicológica, sutil e sistemática, perpetrada especificamente por mulheres contra outras mulheres no ambiente corporativo.
+              O WOLLYING designa o fenômeno da violência psicológica, sistemática e contínua, perpetrada especificamente por mulheres contra outras mulheres no ambiente corporativo.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               A <strong>Gestão Emocional Brasil</strong> é a plataforma oficial que aplica o Protocolo Integrado de Aplicação do WOLLYING. Nossa plataforma atua na identificação, prevenção e gestão de riscos psicossociais, garantindo que sua organização esteja em conformidade com a NR-1 enquanto promove um ambiente de trabalho verdadeiramente saudável e produtivo.
@@ -246,7 +246,7 @@ const Landing = () => (
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-heading font-bold text-foreground mb-6 leading-tight">
-                  Identificando a Dinâmica Sutil do Wollying
+                  Identificando a Dinâmica do Wollying
                 </h3>
                 <p className="text-foreground/80 leading-relaxed mb-6 text-lg">
                   Muitas vezes invisível, o Wollying se manifesta em pequenos gestos, exclusões e comentários que minam a autoconfiança e a reputação profissional. É crucial saber identificar:

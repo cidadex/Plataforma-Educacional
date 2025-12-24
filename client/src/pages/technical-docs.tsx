@@ -94,7 +94,7 @@ export default function TechnicalDocs() {
                 <div>
                    <h2 className="text-2xl font-bold font-heading mb-4 text-foreground">Pioneirismo e Autoridade Técnica</h2>
                    <p className="text-muted-foreground leading-relaxed mb-4">
-                     O conceito <strong>WOLLYING</strong> é consolidado internacionalmente há mais de 20 anos como referência no combate à violência psicológica sutil entre mulheres. No Brasil, essa metodologia foi introduzida de forma pioneira em 2022 por <strong>Kaká Ribeiro</strong>, que adaptou o protocolo às especificidades culturais e jurídicas do nosso país.
+                     O conceito <strong>WOLLYING</strong> é consolidado internacionalmente há mais de 20 anos como referência no combate à violência psicológica entre mulheres. No Brasil, essa metodologia foi introduzida de forma pioneira em 2022 por <strong>Kaká Ribeiro</strong>, que adaptou o protocolo às especificidades culturais e jurídicas do nosso país.
                    </p>
                    <p className="text-muted-foreground leading-relaxed">
                      Kaká Ribeiro é a <strong>única especialista no país</strong> detentora do Protocolo Integrado de Aplicação do WOLLYING, validado juridicamente e fundamentado na Lei nº 14.188/2021. Sua aplicação tem transformado ambientes corporativos ao alinhar gestão emocional e conformidade com a NR-1.
