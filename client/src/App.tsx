@@ -8,7 +8,7 @@ import StudentLayout from "@/components/layout/student-layout";
 import AdminLayout from "@/components/layout/admin-layout";
 import AuthLayout from "@/components/layout/auth-layout";
 import { Button } from "@/components/ui/button";
-import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop } from "lucide-react";
+import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop, Menu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
@@ -92,8 +92,26 @@ const Landing = () => (
         </Link>
       </div>
       {/* Mobile Menu Button - simplified for prototype */}
-      <div className="md:hidden">
-         <Link href="/login"><Button size="sm">Entrar</Button></Link>
+      <div className="md:hidden flex items-center gap-4">
+        <Link href="/login"><Button size="sm">Entrar</Button></Link>
+        <div className="relative group">
+           <Button variant="ghost" size="icon" className="group-hover:bg-secondary/20">
+             <Menu className="w-6 h-6" />
+           </Button>
+           <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-border p-2 hidden group-hover:block hover:block z-50 animate-in fade-in slide-in-from-top-2">
+             <div className="flex flex-col gap-1">
+               <Link href="/">
+                 <Button variant="ghost" className="w-full justify-start">Início</Button>
+               </Link>
+               <Link href="/why-hire">
+                 <Button variant="ghost" className="w-full justify-start">Por que Contratar</Button>
+               </Link>
+               <Link href="/technical-docs">
+                 <Button variant="ghost" className="w-full justify-start">Documentos Técnicos</Button>
+               </Link>
+             </div>
+           </div>
+        </div>
       </div>
     </header>
     
@@ -130,7 +148,6 @@ const Landing = () => (
               <p className="text-sm font-medium text-foreground leading-relaxed">
                 A Gestão Emocional Brasil desenvolve e aplica o <strong>Protocolo Integrado de Aplicação do WOLLYING</strong>, ferramenta técnica voltada à gestão de riscos psicossociais, em conformidade com a NR-1.
               </p>
-              <p className="text-xs font-bold text-primary mt-2 uppercase tracking-wide">Simples. Jurídico. Forte.</p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
