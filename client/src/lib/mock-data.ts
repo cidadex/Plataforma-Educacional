@@ -95,6 +95,16 @@ export const currentUser: UserProfile = {
 
 export const modules: Module[] = [
   {
+    id: "m0",
+    title: "Módulo Especial: O Protocolo Wollying na Prática",
+    description: "Compreenda o fenômeno do Wollying, aprenda a identificar sinais de violência psicológica e conheça os canais de apoio.",
+    thumbnail: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80",
+    progress: 0,
+    lessonsCount: 4,
+    duration: "3h",
+    category: "Módulo"
+  },
+  {
     id: "m1",
     title: "Módulo 1: Fundamentos da Gestão Emocional Corporativa",
     description: "Conceitos de saúde mental no trabalho, determinantes organizacionais e combate ao estigma profissional.",
@@ -152,6 +162,16 @@ export const modules: Module[] = [
     progress: 0,
     lessonsCount: 2,
     duration: "2h",
+    category: "Módulo"
+  },
+  {
+    id: "m7",
+    title: "Módulo 7: Saúde Mental da Mulher e Acolhimento",
+    description: "Espaço dedicado às especificidades da saúde emocional feminina no ambiente corporativo.",
+    thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    progress: 0,
+    lessonsCount: 3,
+    duration: "3h",
     category: "Módulo"
   }
 ];

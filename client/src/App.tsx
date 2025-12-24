@@ -594,11 +594,33 @@ const StudentDashboard = () => (
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-heading font-bold text-foreground">Olá, Mariana</h1>
-          <p className="text-muted-foreground mt-1">Bem-vinda ao programa "Gestão Emocional Brasil".</p>
+          <p className="text-muted-foreground mt-1">Bem-vinda ao seu espaço seguro de desenvolvimento e acolhimento.</p>
         </div>
         <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
           <Brain size={18} /> Carga Horária Total: 24h
         </div>
+      </div>
+      
+      {/* Wollying Support Card - Dashboard */}
+      <div className="bg-secondary/10 border border-secondary/20 rounded-xl p-6 relative overflow-hidden">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+           <div className="flex items-center gap-4">
+             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-secondary shadow-sm">
+               <HeartHandshake size={24} />
+             </div>
+             <div>
+               <h3 className="text-xl font-bold text-foreground">Espaço de Acolhimento Wollying</h3>
+               <p className="text-foreground/70">Um canal seguro e sigiloso para apoio em casos de violência psicológica.</p>
+             </div>
+           </div>
+           <Link href="/student/support">
+             <Button className="bg-white text-secondary hover:bg-white/90 border border-secondary/20 shadow-sm">
+               Acessar Suporte Especializado
+             </Button>
+           </Link>
+        </div>
+        {/* Decorative background */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50"></div>
       </div>
       
       {/* Stats Cards */}
@@ -663,20 +685,21 @@ const StudentDashboard = () => (
         </Link>
       </div>
 
-      {/* Upcoming Live */}
+      {/* Upcoming Live - Wollying Focus */}
       <div className="bg-secondary/20 border border-secondary rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center shrink-0">
-            <CalendarPageIcon />
+            <PlayCircle size={24} />
           </div>
           <div>
-            <h3 className="font-bold text-lg">Aula Magna: Abertura do Programa</h3>
-            <p className="text-muted-foreground">Com Kaká Ribeiro • 15 Dez às 14:00</p>
+            <div className="text-xs font-bold text-primary uppercase tracking-wide mb-1">Vídeo em Destaque</div>
+            <h3 className="font-bold text-lg">Entendendo o Wollying: Identificação e Apoio</h3>
+            <p className="text-muted-foreground">Com Kaká Ribeiro • Duração: 15 min</p>
           </div>
         </div>
-        <Link href="/student/calendar">
-          <Button>Ver Detalhes</Button>
-        </Link>
+        <Button className="gap-2">
+           <PlayCircle size={16} /> Assistir Agora
+        </Button>
       </div>
     </div>
   </StudentLayout>
