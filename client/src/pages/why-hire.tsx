@@ -186,7 +186,7 @@ const WhyHire = () => {
               </h2>
               <div className="space-y-4 text-lg text-foreground/70 font-light leading-relaxed">
                 <p>
-                  A metodologia aplicada na plataforma é fundamentada nos estudos e na prática de <strong>Kaká Ribeiro</strong>, especialista com mais de 20 anos de pioneirismo na identificação e combate à violência psicológica sutil entre mulheres no ambiente corporativo.
+                  A metodologia aplicada na plataforma é fundamentada nos estudos e na prática de <strong>Kaká Ribeiro</strong>. Embora o termo <strong>WOLLYING</strong> seja reconhecido internacionalmente há mais de duas décadas, foi introduzido no Brasil em 2022 através de seu trabalho pioneiro de adaptação à realidade nacional.
                 </p>
                 <p>
                   O Protocolo WOLLYING não é apenas uma teoria, mas uma ferramenta técnica robusta, validada juridicamente e desenhada para proteger instituições e colaboradores, garantindo compliance e segurança psicológica real.
