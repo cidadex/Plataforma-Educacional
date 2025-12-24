@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
 import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810942165.jpg";
+import womanModuleImage from "@assets/stock_images/professional_busines_686e4a14.jpg";
 import {
   LineChart,
   Line,
@@ -723,7 +724,7 @@ const StudentDashboard = () => (
           <a className="block bg-card border rounded-xl p-6 hover:border-primary/50 transition-colors group">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="w-full md:w-48 h-32 rounded-lg bg-slate-200 overflow-hidden shrink-0 relative">
-                <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <img src={womanModuleImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                    <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg">
                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-current border-b-[6px] border-b-transparent ml-1"></div>
@@ -734,12 +735,12 @@ const StudentDashboard = () => (
                 <div className="flex justify-between items-start">
                    <div>
                      <span className="text-xs font-bold text-primary uppercase tracking-wide">Módulo 1</span>
-                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Fundamentos da Gestão Emocional Corporativa</h3>
+                     <h3 className="font-bold text-xl mt-1 group-hover:text-primary transition-colors">Saúde Mental e Liderança Feminina</h3>
                    </div>
                    <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Em andamento</span>
                 </div>
                 <p className="text-muted-foreground mt-2 line-clamp-2">
-                  Conceitos gerais e determinantes da saúde emocional, combate ao estigma e desinformação no contexto organizacional.
+                  Estratégias para fortalecer a inteligência emocional, superar desafios de gênero e promover um ambiente de trabalho equitativo.
                 </p>
                 <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
                    <span>3 aulas</span>
