@@ -228,13 +228,16 @@ const Landing = () => (
       {/* Target Audience Section - NR-1 */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-16">
              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/30 text-primary-foreground text-sm font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck size={14} /> Conformidade NR-1
+              <ShieldCheck size={14} /> Metodologia Exclusiva
             </div>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Para quem é a NR-1 (NRU)?</h2>
-            <p className="text-xl text-foreground/70 font-light leading-relaxed">
-              A NR-1 é destinada a todas as organizações, instituições e pessoas responsáveis por ambientes de trabalho, independentemente do porte, formato jurídico ou área de atuação.
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">O que é WOLLYING?</h2>
+            <p className="text-xl text-foreground/70 font-light leading-relaxed mb-6">
+              O WOLLYING designa o fenômeno da violência psicológica, sutil e sistemática, perpetrada especificamente por mulheres contra outras mulheres no ambiente corporativo.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              A <strong>Gestão Emocional Brasil</strong> é a plataforma oficial que aplica o Protocolo Integrado de Aplicação do WOLLYING. Nossa plataforma atua na identificação, prevenção e gestão de riscos psicossociais, garantindo que sua organização esteja em conformidade com a NR-1 enquanto promove um ambiente de trabalho verdadeiramente saudável e produtivo.
             </p>
           </div>
 
