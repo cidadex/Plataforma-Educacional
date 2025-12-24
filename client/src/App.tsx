@@ -156,7 +156,7 @@ const Landing = () => (
                   <Brain size={20} /> Iniciar Gestão Emocional
                 </Button>
               </Link>
-              <Link href="/admin/dashboard">
+              <Link href="/login">
                 <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-2 hover:bg-secondary/20">
                   Saiba Mais
                 </Button>
