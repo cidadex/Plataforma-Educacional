@@ -56,7 +56,7 @@ export default function TechnicalDocs() {
           
           {/* Header Section */}
           <div className="text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/30 text-primary-foreground text-sm font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/30 text-secondary-foreground font-bold uppercase tracking-wider text-sm">
               <Scale size={14} /> Fundamentação Legal e Técnica
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">

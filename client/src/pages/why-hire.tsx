@@ -80,20 +80,20 @@ const WhyHire = () => {
                 Atualização NR-1
               </Badge>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Sua empresa está preparada para a <span className="text-primary italic font-serif">gestão de riscos psicossociais?</span>
+                Um espaço de <span className="text-primary italic font-serif">Acolhimento</span> para a Mulher no ambiente de trabalho.
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed font-light">
-                A nova NR-1 obriga empresas a gerenciarem a saúde mental dos colaboradores. Transforme essa obrigação em um diferencial competitivo de produtividade e bem-estar.
+                Muito além da conformidade com a NR-1, oferecemos um refúgio seguro contra o sofrimento silencioso, a exclusão e o burnout. Uma plataforma feita para acolher, ouvir e transformar a experiência feminina nas empresas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/login">
                   <Button size="lg" className="rounded-full px-8 h-14 text-lg shadow-xl bg-primary text-white hover:bg-primary/90">
-                    Solicitar Proposta
+                    Conhecer a Plataforma
                   </Button>
                 </Link>
                 <Link href="#nr1-details">
                   <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-2">
-                    Entenda a Norma
+                    Entenda o Wollying
                   </Button>
                 </Link>
               </div>
@@ -102,19 +102,19 @@ const WhyHire = () => {
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl opacity-60"></div>
               <img 
                 src={heroImage} 
-                alt="Equipe corporativa saudável" 
+                alt="Acolhimento e suporte emocional" 
                 className="relative rounded-3xl shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-all duration-500 z-10"
               />
             </div>
           </div>
         </section>
 
-        {/* NR-1 Explanation Section */}
+        {/* NR-1 Explanation Section -> Wollying Focus */}
         <section id="nr1-details" className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-6 text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">O que muda com a nova NR-1?</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">A realidade que a nova NR-1 precisa enfrentar</h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              A Norma Regulamentadora nº 1 foi atualizada para incluir explicitamente os <strong>riscos psicossociais</strong> no Programa de Gerenciamento de Riscos (PGR). Isso significa que a saúde mental agora é um requisito legal de segurança do trabalho.
+              As mulheres enfrentam desafios únicos e muitas vezes invisíveis. O <strong>WOLLYING</strong> não é apenas um termo técnico, é a descrição de uma realidade dolorosa de sabotagem, isolamento e violência psicológica sutil que adoece profissionais brilhantes.
             </p>
           </div>
 
@@ -124,20 +124,20 @@ const WhyHire = () => {
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm mb-4">
                   <AlertTriangle size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Obrigação Legal</h3>
+                <h3 className="text-xl font-bold text-foreground">O Sofrimento Silencioso</h3>
                 <p className="text-foreground/70">
-                  As empresas devem identificar, avaliar e controlar fatores como estresse, assédio, sobrecarga e violência no trabalho.
+                  O medo de ser julgada como "emocional demais" faz com que muitas mulheres sofram caladas, acumulando traumas que levam ao afastamento.
                 </p>
               </CardContent>
             </Card>
             <Card className="border-secondary/30 shadow-md bg-secondary/10">
               <CardContent className="p-8 space-y-4">
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm mb-4">
-                  <FileText size={24} />
+                  <Heart size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Documentação (PGR)</h3>
+                <h3 className="text-xl font-bold text-foreground">Acolhimento Real</h3>
                 <p className="text-foreground/70">
-                  Os riscos psicossociais devem constar no Inventário de Riscos e no Plano de Ação do PGR da organização.
+                  Criamos um espaço onde a vulnerabilidade não é fraqueza. Aqui, cada relato é tratado com seriedade, sigilo e humanidade.
                 </p>
               </CardContent>
             </Card>
@@ -146,9 +146,9 @@ const WhyHire = () => {
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm mb-4">
                   <ShieldCheck size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Prevenção</h3>
+                <h3 className="text-xl font-bold text-foreground">Proteção e Mudança</h3>
                 <p className="text-foreground/70">
-                  Não basta remediar; é preciso agir preventivamente para evitar o adoecimento mental dos colaboradores.
+                  Identificar o Wollying é o primeiro passo para quebrá-lo. Oferecemos ferramentas para transformar ambientes tóxicos em redes de apoio.
                 </p>
               </CardContent>
             </Card>
