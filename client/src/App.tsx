@@ -8,7 +8,7 @@ import StudentLayout from "@/components/layout/student-layout";
 import AdminLayout from "@/components/layout/admin-layout";
 import AuthLayout from "@/components/layout/auth-layout";
 import { Button } from "@/components/ui/button";
-import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop, Menu } from "lucide-react";
+import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop, Menu, HeartHandshake, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
@@ -433,6 +433,76 @@ const Landing = () => (
                <div className="absolute top-0 right-0 w-80 h-80 bg-muted/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-100 transition-opacity"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Wollying & Women's Support Section */}
+      <section className="py-24 bg-purple-50/50 border-y border-purple-100 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200"></div>
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+           <div className="relative order-2 lg:order-1">
+             <div className="relative z-10 bg-white rounded-[2.5rem] p-8 shadow-xl border border-purple-100">
+               <img 
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80" 
+                 alt="Acolhimento e Suporte Feminino" 
+                 className="w-full h-[400px] object-cover rounded-3xl"
+               />
+               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-purple-50 max-w-xs hidden md:block">
+                 <p className="text-purple-900 font-medium italic">"Você não precisa carregar esse peso sozinha. Estamos aqui por você."</p>
+                 <p className="text-purple-600/60 text-xs mt-2 font-bold uppercase tracking-wider">- Equipe de Acolhimento</p>
+               </div>
+             </div>
+             {/* Decorative circles */}
+             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-purple-200/50 rounded-full animate-pulse"></div>
+             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-purple-100/30 rounded-full"></div>
+           </div>
+           
+           <div className="order-1 lg:order-2 space-y-8">
+             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-sm font-bold uppercase tracking-wider">
+               <Sparkles size={14} /> Espaço de Acolhimento
+             </div>
+             
+             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+               Protocolo Wollying: <br/> <span className="text-purple-600">Segurança e Apoio</span>
+             </h2>
+             
+             <p className="text-xl text-foreground/70 font-light leading-relaxed">
+               Desenvolvemos um ambiente seguro, sigiloso e acolhedor, especialmente pensado para mulheres e profissionais que enfrentam violências invisíveis no trabalho.
+             </p>
+
+             <div className="space-y-4">
+               <div className="flex items-start gap-4">
+                 <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 mt-1">
+                   <HeartHandshake size={20} />
+                 </div>
+                 <div>
+                   <h4 className="font-bold text-lg text-foreground">Acolhimento Humanizado</h4>
+                   <p className="text-foreground/70">Escuta ativa e suporte emocional sem julgamentos, focado na sua recuperação e fortalecimento.</p>
+                 </div>
+               </div>
+               
+               <div className="flex items-start gap-4">
+                 <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 mt-1">
+                   <ShieldCheck size={20} />
+                 </div>
+                 <div>
+                   <h4 className="font-bold text-lg text-foreground">Canal Seguro e Sigiloso</h4>
+                   <p className="text-foreground/70">Ferramentas de denúncia e registro protegidas, garantindo sua privacidade e segurança total.</p>
+                 </div>
+               </div>
+             </div>
+
+             <div className="pt-4">
+               <Link href="/login">
+                 <Button size="lg" className="rounded-full px-8 h-14 text-lg shadow-lg bg-purple-600 hover:bg-purple-700 text-white border-none gap-2 w-full sm:w-auto">
+                   Acessar Área de Acolhimento <ArrowRight size={18} />
+                 </Button>
+               </Link>
+               <p className="text-sm text-muted-foreground mt-4 text-center sm:text-left">
+                 *Acesso exclusivo para membros da plataforma.
+               </p>
+             </div>
+           </div>
         </div>
       </section>
 
