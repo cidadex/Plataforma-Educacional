@@ -9,6 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import memorialPdf from "@assets/Memorial_Descritivo_Completo_Protocolo_WOLLYING_1766571023000.pdf";
+import declaracaoPdf from "@assets/Declaracao_WOLLYING_INTEGRA_Kaka_Ribeiro_1766571022965.pdf";
+import notaTecnicaPdf from "@assets/Nota_Tecnica_WOLLYING_NR1_1766571023032.pdf";
+
 export default function TechnicalDocs() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background">
@@ -134,9 +138,11 @@ export default function TechnicalDocs() {
                     Descrição técnica completa do protocolo, metodologia, fundamentação jurídica e aplicação institucional.
                   </p>
                 </div>
-                <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
-                  <Download size={16} /> Baixar PDF
-                </Button>
+                <a href={memorialPdf} download="Memorial_Descritivo_Protocolo_WOLLYING.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
+                    <Download size={16} /> Baixar PDF
+                  </Button>
+                </a>
               </div>
 
               {/* Document 2 */}
@@ -150,9 +156,11 @@ export default function TechnicalDocs() {
                     Documento jurídico que comprova a autoria, exclusividade metodológica e propriedade intelectual de Kaká Ribeiro.
                   </p>
                 </div>
-                <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
-                  <Download size={16} /> Baixar PDF
-                </Button>
+                <a href={declaracaoPdf} download="Declaracao_Titularidade_Kaka_Ribeiro.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
+                    <Download size={16} /> Baixar PDF
+                  </Button>
+                </a>
               </div>
 
               {/* Document 3 */}
@@ -166,9 +174,11 @@ export default function TechnicalDocs() {
                     Análise técnica demonstrando a integração e conformidade do Protocolo Wollying com as diretrizes da NR-1.
                   </p>
                 </div>
-                <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
-                  <Download size={16} /> Baixar PDF
-                </Button>
+                <a href={notaTecnicaPdf} download="Nota_Tecnica_NR1_WOLLYING.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="gap-2 shrink-0 border-primary/20 hover:bg-primary/5 text-primary">
+                    <Download size={16} /> Baixar PDF
+                  </Button>
+                </a>
               </div>
             </div>
           </section>
