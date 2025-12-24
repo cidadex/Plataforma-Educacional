@@ -11,6 +11,12 @@ import { Button } from "@/components/ui/button";
 import { Brain, Heart, ShieldCheck, PlayCircle, ArrowRight, CheckCircle, Users, Trophy, Star, Building2, Landmark, Stethoscope, Handshake, Laptop, Menu, HeartHandshake, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
 import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810942165.jpg";
 import {
@@ -94,24 +100,24 @@ const Landing = () => (
       {/* Mobile Menu Button - simplified for prototype */}
       <div className="md:hidden flex items-center gap-4">
         <Link href="/login"><Button size="sm">Entrar</Button></Link>
-        <div className="relative group">
-           <Button variant="ghost" size="icon" className="group-hover:bg-secondary/20">
-             <Menu className="w-6 h-6" />
-           </Button>
-           <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-border p-2 hidden group-hover:block hover:block z-50 animate-in fade-in slide-in-from-top-2">
-             <div className="flex flex-col gap-1">
-               <Link href="/">
-                 <Button variant="ghost" className="w-full justify-start">Início</Button>
-               </Link>
-               <Link href="/why-hire">
-                 <Button variant="ghost" className="w-full justify-start">Por que Contratar</Button>
-               </Link>
-               <Link href="/technical-docs">
-                 <Button variant="ghost" className="w-full justify-start">Documentos Técnicos</Button>
-               </Link>
-             </div>
-           </div>
-        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <Menu className="w-6 h-6" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <Link href="/">
+              <DropdownMenuItem className="cursor-pointer">Início</DropdownMenuItem>
+            </Link>
+            <Link href="/why-hire">
+              <DropdownMenuItem className="cursor-pointer">Por que Contratar</DropdownMenuItem>
+            </Link>
+            <Link href="/technical-docs">
+              <DropdownMenuItem className="cursor-pointer">Documentos Técnicos</DropdownMenuItem>
+            </Link>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
     
@@ -131,7 +137,7 @@ const Landing = () => (
               <ShieldCheck size={16} className="text-primary" /> Programa Nacional de Gestão Emocional no Trabalho
             </div>
             
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
+            <h1 className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
               A Gestão Emocional Brasil desenvolve e aplica o <span className="text-primary italic font-serif relative whitespace-nowrap">
                 Protocolo Integrado de Aplicação do WOLLYING
                 <svg className="absolute w-[105%] h-3 -bottom-1 -left-1 text-secondary -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -341,7 +347,7 @@ const Landing = () => (
                <Sparkles size={14} /> Espaço de Acolhimento
              </div>
              
-             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground leading-tight">
                Protocolo Wollying: <br/> <span className="text-primary">Segurança e Apoio</span>
              </h2>
              
