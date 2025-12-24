@@ -241,6 +241,64 @@ const Landing = () => (
             </p>
           </div>
 
+          {/* New Section: Identifying Wollying Dynamics */}
+          <div className="bg-secondary/10 rounded-[2rem] p-8 md:p-12 mb-16 border border-secondary/20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-heading font-bold text-foreground mb-6 leading-tight">
+                  Identificando a Dinâmica Sutil do Wollying
+                </h3>
+                <p className="text-foreground/80 leading-relaxed mb-6 text-lg">
+                  Muitas vezes invisível, o Wollying se manifesta em pequenos gestos, exclusões e comentários que minam a autoconfiança e a reputação profissional. É crucial saber identificar:
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-all">
+                    <h4 className="font-bold text-lg text-foreground mb-2 flex items-center gap-2">
+                      <Users size={18} className="text-primary" /> Para quem recebe (Vítima)
+                    </h4>
+                    <p className="text-sm text-foreground/70">
+                      Sensação constante de inadequação, isolamento repentino em projetos, críticas excessivas sobre questões não-técnicas e boatos sobre sua vida pessoal. Reconhecer que não é "apenas impressão" é o primeiro passo.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-all">
+                    <h4 className="font-bold text-lg text-foreground mb-2 flex items-center gap-2">
+                      <Brain size={18} className="text-secondary" /> Para quem pratica (Autora)
+                    </h4>
+                    <p className="text-sm text-foreground/70">
+                      Muitas vezes nasce da insegurança ou rivalidade estimulada pelo ambiente. A transformação exige autoconsciência: "Por que me sinto ameaçada por ela?", "Por que preciso diminuir o trabalho dela?". Mudar essa postura fortalece a liderança real.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <p className="text-primary text-sm font-medium italic flex gap-2">
+                    <Sparkles size={16} className="shrink-0 mt-0.5" />
+                    "A importância de identificar e mudar reside na construção de uma cultura onde o sucesso de uma mulher não representa a ameaça ao sucesso de outra."
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" 
+                    alt="Mulheres conversando e se apoiando no trabalho" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                    <p className="text-white font-medium text-lg border-l-2 border-primary pl-4">
+                      A transformação começa quando substituímos a competição silenciosa pela aliança estratégica.
+                    </p>
+                  </div>
+                </div>
+                {/* Decorative dots */}
+                <div className="absolute -z-10 -top-4 -right-4 w-24 h-24 bg-pattern-dots opacity-20"></div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
             <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary/50 group">
