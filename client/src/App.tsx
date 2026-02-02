@@ -286,7 +286,7 @@ const Landing = () => (
                   <img 
                     src="/images/kaka-ribeiro-new.jpg" 
                     alt="Kaká Ribeiro - Protocolo Wollying" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
                     <p className="text-white font-medium text-lg border-l-2 border-primary pl-4">
