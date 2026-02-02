@@ -282,20 +282,27 @@ const Landing = () => (
               </div>
 
               <div className="relative">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500 bg-black">
                   <img 
                     src="/images/kaka-ribeiro-new.jpg" 
                     alt="Kaká Ribeiro - Protocolo Wollying" 
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                    <p className="text-white font-bold text-xl">Kaká Ribeiro</p>
-                    <p className="text-secondary font-medium text-sm mb-4">Psicanalista</p>
-                    <p className="text-white/90 font-medium text-lg border-l-2 border-primary pl-4">
-                      A transformação começa quando substituímos a competição silenciosa pela aliança estratégica.
-                    </p>
-                  </div>
                 </div>
+                
+                {/* Nome e cargo abaixo da foto */}
+                <div className="mt-4 text-center md:text-left">
+                  <h3 className="text-xl font-bold text-foreground">Kaká Ribeiro</h3>
+                  <p className="text-primary font-medium text-sm">Psicanalista</p>
+                </div>
+
+                {/* Texto com espaçamento reduzido e melhor posicionamento */}
+                <div className="mt-6 p-6 bg-secondary/10 rounded-xl border-l-4 border-primary shadow-sm">
+                  <p className="text-foreground/80 font-medium text-lg leading-snug">
+                    A transformação começa quando substituímos a competição silenciosa pela aliança estratégica.
+                  </p>
+                </div>
+
                 {/* Decorative dots */}
                 <div className="absolute -z-10 -top-4 -right-4 w-24 h-24 bg-pattern-dots opacity-20"></div>
               </div>
