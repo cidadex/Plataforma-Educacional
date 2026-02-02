@@ -288,8 +288,10 @@ const Landing = () => (
                     alt="Kaká Ribeiro - Protocolo Wollying" 
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
-                    <p className="text-white font-medium text-lg border-l-2 border-primary pl-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+                    <p className="text-white font-bold text-xl">Kaká Ribeiro</p>
+                    <p className="text-secondary font-medium text-sm mb-4">Psicanalista</p>
+                    <p className="text-white/90 font-medium text-lg border-l-2 border-primary pl-4">
                       A transformação começa quando substituímos a competição silenciosa pela aliança estratégica.
                     </p>
                   </div>
