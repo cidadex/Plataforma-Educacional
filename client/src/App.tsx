@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
-import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810942165.jpg";
+import heroImage from "@/assets/images/kaka-ribeiro-new.jpg";
 import womanModuleImage from "@assets/stock_images/professional_busines_686e4a14.jpg";
 import {
   LineChart,
