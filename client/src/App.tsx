@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import sleepImage from "@assets/stock_images/restful_sleep_peacef_5f3dd78f.jpg";
-import heroImage from "@/assets/images/kaka-ribeiro-new.jpg";
+import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810942165.jpg";
 import womanModuleImage from "@assets/stock_images/professional_busines_686e4a14.jpg";
 import {
   LineChart,
@@ -284,8 +284,8 @@ const Landing = () => (
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500">
                   <img 
-                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" 
-                    alt="Mulheres conversando e se apoiando no trabalho" 
+                    src="/src/assets/images/kaka-ribeiro-new.jpg" 
+                    alt="Kaká Ribeiro - Protocolo Wollying" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">

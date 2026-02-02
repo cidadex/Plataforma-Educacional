@@ -23,7 +23,7 @@ import {
 
 import heroImage from "@assets/Eu_quero_uma_imagem_de_reuniao_corporativa_com_diversidade_use_1765810336269.jpg";
 
-import kakaRibeiroImg from "@/assets/images/kaka-ribeiro-new.jpg";
+import kakaRibeiroImg from "@assets/WhatsApp_Image_2025-12-17_at_11.12.45_1766578519530.jpeg";
 
 const WhyHire = () => {
   return (
