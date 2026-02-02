@@ -284,7 +284,7 @@ const Landing = () => (
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500">
                   <img 
-                    src="/src/assets/images/kaka-ribeiro-new.jpg" 
+                    src="/images/kaka-ribeiro-new.jpg" 
                     alt="Kaká Ribeiro - Protocolo Wollying" 
                     className="w-full h-full object-cover"
                   />
